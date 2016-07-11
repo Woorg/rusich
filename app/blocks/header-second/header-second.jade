@@ -1,0 +1,116 @@
+mixin header-second()
+	+b('header').header._second&attributes(attributes)
+		+e.body
+			+e.phone
+				+b.phone
+					+e.number()
+						+e('a')(href='tel:74956773636') + 7 (495) 677 3636
+					+e('a').link._popup(href='#popup') бесплатный звонок
+
+			+e.logo
+				+b('a').logo(href='#') Русич - www.rusichsamogon.ru
+
+			+e.social._big
+				+b.social._big
+					+e('a').item._instagram._big(href='#') instagram
+					+e('a').item._facebook._big(href='#') facebook
+					+e('a').item._vk._big(href='#') vk
+
+			+e.meta
+				+b('a').basket-link._full(href='#')
+					+e.icon
+					+e.text Корзина: <span>6</span> товаров
+
+			+b.controls
+				+e('a').link._enter(href='#') Вход
+				| |
+				+e('a').link._register(href='#') Регистрация
+
+				+b.enter
+					+e.row
+						+e.col
+							+e.title Я уже зарегистрирован
+
+							+e.form
+								+e('form')#enter-form(method='post' action='')
+									+e('input').input(type='text' value='' placeholder='логин' name='enter_login')
+
+									+e('input').input(type='password' value='' placeholder='пароль' name='enter_password')
+
+									+e.input-w
+										+e('input').submit__.button._style-four(type='submit' value='Войти')
+										+e('a').forget-pass(href='#link') забыли пароль?
+
+									+e.remember
+										+e('input').checkbox(id='ent-check-label' type='checkbox' value='' name='')
+										+e('label').checkbox-label(for='ent-check-label') запомнить пароль
+
+						+e.col
+							+e.title Я новый покупатель
+
+							+e('a').reg-button__.button._style-five(href='#link') зарегистрироваться
+
+
+					+e.social-login
+						+e.social-text Или войти через социальные сети
+						+e.social-links
+							+e('a').social-link._fb(href='#link') Facebook
+							+e('a').social-link._vk(href='#link') Vk
+							+e('a').social-link._inst(href='#link') Instagram
+
+					+e('a').close(href='#close') Закрыть
+
+
+		+e.bottom
+			+e.in
+				+b.search
+					//- +e.w
+					+e('form').form
+						+e('input').icon(type='submit' value='Поиск')
+						+e('input').input(type='input' value='' placeholder='поиск по сайту' name='')
+
+				+b('nav').menu
+					+e('ul').list
+						+e('li').item._active
+							+e('a').link(href='#') Оборудование <span>(13)</span>
+						+e('li').item
+							+e('a').link(href='#') Ингредиенты <span>(5)</span>
+						+e('li').item
+							+e('a').link(href='#') Аксессуары <span>(55)</span>
+						+e('li').item
+							+e('a').link(href='#') Тара и емкости <span>(56)</span>
+						+e('li').item
+							+e('a').link(href='#') Доставка
+						+e('li').item
+							+e('a').link(href='#') Оплата
+
+			+b.feedback
+				+e.button
+					+e.text Давайте поговорим
+					+e.icon
+
+				+b.messenger
+					+e.header
+						+e.title Напишите ваше сообщение
+						+e.subtitle Операторы онлайн
+
+					+e.body
+						+e.user
+							+e.user-pic
+								+e('img')(src='assets/images/general/operator-first.jpg')
+							+e.user-name Сергей Иванович
+							+e.user-text Здравствуйте, хочу сделать <br/>заказ у вас!
+
+						+e.admin
+							+e.admin-pic
+								+e('img')(src='assets/images/general/operator-second.jpg')
+							+e.admin-name Администратор
+							+e.admin-text Добрый день, готова помочь <br/>вам с любым вопросом!
+
+					+e.bottom
+						+e('form')(method='post')
+							+e('textarea').textarea(placeholder='Введите сообщение и нажмите Enter')
+
+					+e.close Закрыть
+
+					+e.status

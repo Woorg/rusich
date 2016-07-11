@@ -1,0 +1,40 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+include ../blocks/article/article
+include ../blocks/latest-news/latest-news
+include ../blocks/advantages/advantages
+include ../blocks/footer-second/footer-second
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'О самогоноварении';
+
+block content
+	+topline()
+	+header()
+	+b('main').main._articles
+		+e.in
+			+breadcrumbs()._articles
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Новости
+
+			+b('h1').title Новости
+
+		+article()
+
+		+latest-news()
+
+
+	+advantages()
+	+footer-second()
+
+	+scripts(['app.min.js'])

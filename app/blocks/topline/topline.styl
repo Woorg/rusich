@@ -1,0 +1,31 @@
+.topline
+	background-color $color-gray-dark
+	&__in
+		@extend .in
+	&__list
+		padding-left 36px
+		text-align center
+		font-size 0
+	&__item
+		display inline-block
+		vertical-align top
+	&__link
+		border-bottom 5px solid transparent
+		padding-top 16px
+		padding-left 30px
+		padding-bottom 15px
+		padding-right 30px
+		display block
+		font-family $roboto-lght
+		font-size 12px
+		font-weight normal
+		line-height 14px
+		color #2c2c2b
+		text-decoration none
+		&:hover
+			border-bottom 5px solid #00a2ff
+	&__item_active
+		.topline__link
+			border-bottom 5px solid #00a2ff
+
+

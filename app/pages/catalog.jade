@@ -1,0 +1,377 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+include ../blocks/hero/hero
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content/content
+include ../blocks/side/side
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+
+block head
+	- var pageTitle = 'Каталог';
+
+block content
+	+topline()
+	+header()
+	+hero()
+		+e.in
+			+b.categories._style-second
+				+e.item._moonshine
+					+e('a').link._active(href='#')
+						+b.button Самогоноварение
+
+				+e.item._brewing
+					+e('a').link(href='#')
+						+b.button Пивоварение
+
+				+e.item._winemaking
+					+e('a').link(href='#')
+						+b.button Виноделие
+	+b('main').main._catalog
+		//- +b.parallax
+			+e.image(src="assets/images/general/moonshine-pattern.png")
+		//- +b.parallax._wine
+			+e.image(src="assets/images/general/wine-pattern.png")
+		+b.parallax
+			+e.image(src="assets/images/general/beer-pattern.png")
+		+e.top
+			+breadcrumbs()
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Каталог
+		+e.in
+			+side()._catalog
+				+e('h2').label Каталог
+				+e.menu
+					+e('ul').menu-list
+						+e('li').menu-item
+							+e('a').menu-link(href='#') Самогонные <br/>аппараты
+								//- +e.menu-icon
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+						+e('li').menu-item._active
+							+e('a').menu-link(href='#') Ректификаторы
+								//- +e.menu-icon._active
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+						+e('li').menu-item
+							+e('a').menu-link(href='#') Готовые <br/>комплекты
+								//- +e.menu-icon
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+						+e('li').menu-item
+							+e('a').menu-link(href='#') Аксессуары
+								//- +e.menu-icon
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+						+e('li').menu-item
+							+e('a').menu-link(href='#') Ингредиенты
+								//- +e.menu-icon
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+						+e('li').menu-item
+							+e('a').menu-link(href='#') Тара
+								//- +e.menu-icon
+							+b.sub-menu
+								+e('ul').list
+									+e('li').item
+										+e('a').link(href='#') Перегонные кубы
+									+e('li').item
+										+e('a').link(href='#') Царги
+									+e('li').item
+										+e('a').link(href='#') Холодильник
+									+e('li').item
+										+e('a').link(href='#') Дефлегматор
+
+				+b.filter
+					+e('h2').title Фильтр
+
+					+e('form')(method='post' action='')
+
+						+e.range-slider
+
+						+e.price-text
+							+e.price-val-from <span>299</span> руб.
+							+e.price-val-to <span>15 999</span> руб.
+						+e.price-wrap
+							+e.price-from
+								+e('label').price-label(for='price-from') Цена от:
+								+e('input').price-input(id='price-from' type='text' value='' name='')
+							+e.price-to
+								+e('label').price-label(for='price-to') До:
+								+e('input').price-input(id='price-to' type='text' value='' name='')
+						+e.bottom
+							+e('a').button(href='#') Со скидкой
+							+e('a').reset(href='#') Сбросить
+
+				+b.side-banner
+					+e('a').link(href='#link')
+						+e('img')(src='assets/images/content/side-banner.jpg')
+				+b.side-banner._video
+					+e('a').link(href='https://www.youtube.com/watch?v=KrjdcL3Ru3Q')
+						+e('img')(src='assets/images/content/side-video-banner.jpg')
+						+e.button
+
+			+content()._catalog
+				+e.top
+					+e('h1').title Самогонные аппараты
+
+					+e.control
+						+b.catalog-view
+							+e('a').list.active(href='#list') Список
+							+e('a').grid(href='#grid') Сетка
+
+						+b.catalog-count
+							+e('form')(method='post')
+								+e('select')(name='')
+									+e('option')(value='1') 20
+									+e('option')(value='2') 40
+									+e('option')(value='3') 60
+
+
+						+b.pagination
+							+e('a').link(href='#') 1
+							+e('a').link(href='#') 2
+							+e('a').link(href='#') 3
+							+e('a').link(href='#') 4
+							+e('a').link(href='#') 5
+
+				+b('ul').products
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-2.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+							+e.label new
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+								//- +b.cart-button В корзину
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-3.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+
+
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-4.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+							+e.label
+								+b.label new
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-2.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-3.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-4.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-2.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-3.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+					+b('li').product
+						+e.image.col
+							+e('a')(href='#')
+								+e('img')(src='assets/images/content/product-4.jpg' alt='product')
+						+e.desc.col
+							+e('a')(href='#')
+								+e.title Дрожжи Safspirit Malt
+								+e.info 500 гр.
+						+e.label-w.col
+						+e.price.col
+							+e.price-val 2 800 руб.
+
+						+e.cart-button.col
+							+e('a').button(href='#') В корзину
+
+				+e.bottom
+					+b.catalog-view
+						+e('a').list.active(href='#list') Список
+						+e('a').grid(href='#grid') Сетка
+
+					+b.catalog-count
+						+e('form')(method='post')
+							+e('select')(name='')
+								+e('option')(value='1') 20
+								+e('option')(value='2') 40
+								+e('option')(value='3') 60
+
+
+					+b.pagination
+						+e('a').link(href='#') 1
+						+e('a').link(href='#') 2
+						+e('a').link(href='#') 3
+						+e('a').link(href='#') 4
+						+e('a').link(href='#') 5
+
+
+				+b.tabs._style-second
+					+e.nav
+						+e('a').link._active(href='#tab-1') Самогоноварение
+						+e('a').link(href='#tab-2') Пивоварение
+						+e('a').link(href='#tab-3') Виноделие
+
+					+e.content
+						+e.tab._active#tab-1
+							+b.long-text._hide
+								+b('p').text Еще древние знали, что истина в вине, но в России зачастую бывает так, что из-за некачественного спиртного после застолья остается только тяжкое похмелье и жестокое разочарование. К сожалению, от алкогольных и пищевых отравлений не застрахован никто: все мы наслышаны о возможных последствиях, связанных с покупкой подделок в магазине, – будь то отечественная водка или дорогой иностранный бурбон. И, несмотря на то, что уровень жизни в стране повышается, опасность наткнуться на обманку не уменьшается, - только постоянно растут цены. <br/>Что же делать: пить или не пить? Для оптимиста, как известно, стакан всегда наполовину полон, и настоящие ценители хорошего алкоголя нашли альтернативу «казенному» спиртному – домашнее винокурение. О самогоноварении, естественно, наслышаны все, но мало кто знает, что современная техника позволяет производить в домашних условиях широчайшую палитру алкоголя на любой вкус: от традиционных водки и настоек до сравнимых с изысканными коньяками и виски напитков.
+
+							+b('a').link._show-more Узнать больше
+
+						+e.tab#tab-2
+							+b.long-text._hide
+								+b('p').text Еще древние знали, что истина в вине, но в России зачастую бывает так, что из-за некачественного спиртного после застолья остается только тяжкое похмелье и жестокое разочарование. К сожалению, от алкогольных и пищевых отравлений не застрахован никто: все мы наслышаны о возможных последствиях, связанных с покупкой подделок в магазине, – будь то отечественная водка или дорогой иностранный бурбон. И, несмотря на то, что уровень жизни в стране повышается, опасность наткнуться на обманку не уменьшается, - только постоянно растут цены. <br/>Что же делать: пить или не пить? Для оптимиста, как известно, стакан всегда наполовину полон, и настоящие ценители хорошего алкоголя нашли альтернативу «казенному» спиртному – домашнее винокурение. О самогоноварении, естественно, наслышаны все, но мало кто знает, что современная техника позволяет производить в домашних условиях широчайшую палитру алкоголя на любой вкус: от традиционных водки и настоек до сравнимых с изысканными коньяками и виски напитков.
+
+							+b('a').link._show-more Узнать больше
+
+						+e.tab#tab-3
+							+b.long-text._hide
+								+b('p').text Еще древние знали, что истина в вине, но в России зачастую бывает так, что из-за некачественного спиртного после застолья остается только тяжкое похмелье и жестокое разочарование. К сожалению, от алкогольных и пищевых отравлений не застрахован никто: все мы наслышаны о возможных последствиях, связанных с покупкой подделок в магазине, – будь то отечественная водка или дорогой иностранный бурбон. И, несмотря на то, что уровень жизни в стране повышается, опасность наткнуться на обманку не уменьшается, - только постоянно растут цены. <br/>Что же делать: пить или не пить? Для оптимиста, как известно, стакан всегда наполовину полон, и настоящие ценители хорошего алкоголя нашли альтернативу «казенному» спиртному – домашнее винокурение. О самогоноварении, естественно, наслышаны все, но мало кто знает, что современная техника позволяет производить в домашних условиях широчайшую палитру алкоголя на любой вкус: от традиционных водки и настоек до сравнимых с изысканными коньяками и виски напитков.
+
+							+b('a').link._show-more Узнать больше
+
+
+
+
+
+	+advantages()
+	+footer()
+
+	+scripts(['app.min.js'])
+

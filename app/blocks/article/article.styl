@@ -1,0 +1,45 @@
+.article-w
+	margin-top 22px
+	border-top 1px solid #ECECEC
+	padding-bottom 15px
+.article
+	@extend .in
+	padding-left 85px
+	padding-right 85px
+	padding-top 36px
+	letter-spacing tracking(75)
+	&__head
+		position relative
+	&__title
+		margin-bottom 15px
+		display inline-block
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #2d2d2d
+	&__date
+		margin-bottom 30px
+		font-size 18px
+		line-height 1
+		text-transform uppercase
+		color #2d2d2d
+	&__back
+		position absolute
+		top 8px
+		right 6px
+		font-size 14px
+		text-decoration underline
+		color #0c0c0c
+	&__image
+		margin-bottom 44px
+		img
+			display block
+			max-width 100%
+			height auto
+	&__text,
+	p
+		margin-bottom 60px
+		font-size 14px
+		line-height 30px
+		color #1b1b1b

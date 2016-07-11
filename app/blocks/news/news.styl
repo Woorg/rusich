@@ -1,0 +1,104 @@
+.news
+	margin-top 36px
+	 padding-bottom 32px
+
+	&__top
+		position relative
+		padding-bottom 30px
+		clearfix()
+	&__title
+		color #3a3a3a
+		font-family $roboto-bld
+		font-size 24px
+		line-height 1
+		text-transform uppercase
+		letter-spacing tracking(75)
+	&__more
+		position absolute
+		top 14px
+		right 14px
+		font-size 14px
+		line-height 1
+		text-decoration underline
+		color #0c0c0c
+		letter-spacing tracking(75)
+		&:hover
+			text-decoration none
+	&__list
+		clearfix()
+	&__item
+		margin-right 30px
+		float left
+		width 500px
+		&:last-child
+			margin-right 0
+	&__link
+		display block
+		text-decoration none
+	&__item-image
+		margin-bottom 26px
+		img
+			width 500px
+			height 187px
+			display block
+	&__item-date
+		margin-bottom 16px
+		font-size 14px
+		text-transform uppercase
+		color #3c3c3c
+		letter-spacing tracking(75)
+	&__item-title
+		margin-bottom 18px
+		font-size 21px
+		line-height 24px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__link
+		&:hover
+			.news__item-title
+				text-decoration underline
+	&__item-text
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+		letter-spacing tracking(75)
+
+.news_latest-news
+	margin-top 0
+	padding-bottom 50px
+	border-top 1px solid #ECECEC
+	.news__in
+		@extend .in
+		padding-top 40px
+		padding-left 85px
+		padding-right 85px
+
+	// .news__more
+	.news__list
+		position relative
+
+	.bx-prev,
+	.bx-next
+		position absolute
+		top 70px
+		hide-text()
+	.bx-prev
+		right -60px
+		sprite($right_arrow)
+		&:hover
+			sprite($right_arrow_hover)
+	.bx-next
+		left -60px
+		sprite($left_arrow)
+		&:hover
+			sprite($left_arrow_hover)
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+.cart-banner
+	background url('../images/content/cart-banner.jpg') 50% 0 no-repeat
+	background-size 100% 106px
+	&__in
+		@extend .in
+		padding-top 30px
+		padding-left 85px
+		padding-bottom 24px
+		padding-right 85px
+		clearfix()
+	&__text
+		margin-right 44px
+		float left
+		font-family $roboto-bld
+		font-size 18px
+		line-height 24px
+		text-transform uppercase
+		color #fff
+		letter-spacing tracking(75)
+	&__icons
+		float left
+		sprite($visa_mastercard_big)
+

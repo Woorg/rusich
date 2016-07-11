@@ -1,0 +1,29 @@
+mixin latest-news()
+	+b.news._latest-news&attributes(attributes)
+		+e.in
+			+e('header').top
+				+e('h2').title Последние новости
+				+e('a').more(href='#') Все новости
+
+			+e('ul').list
+				+e('li').item
+						+e('div').item-image
+							+e('a').link(href='assets/images/content/news-img-1.jpg')
+								+e('img')(src='assets/images/content/news-img-1.jpg' alt='')
+						+e('a').link(href='#')
+							+e('div').item-date 21.05.16
+							+e('h3').item-title Юридические основания производства и продажи самогона
+
+							+e('p').item-text С 1 июля 2015 года в России официально можно производить зерновой дистиллят на продажу. Однако ждать крафтовой революции в крепком алкоголе не стоит.
+
+				+e('li').item
+						+e('div').item-image
+							+e('a').link(href='assets/images/content/news-img-2.jpg')
+								+e('img')(src='assets/images/content/news-img-2.jpg' alt='')
+						+e('a').link(href='#')
+							+e('div').item-date 21.05.16
+							+e('h3').item-title Производство зернового самогона
+
+
+							+e('p').item-text Производство зернового самогона от проращивания зерна до дистилляции
+

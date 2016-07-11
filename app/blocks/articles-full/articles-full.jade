@@ -1,0 +1,95 @@
+mixin articles-full()
+	+b.articles-full&attributes(attributes)
+		+e.w
+			+e.in
+				+b('ul').articles-nav
+					+e('li').item._active
+						+e('a').link(href='#Самогоноварение') Самогоноварение
+					+e('li').item
+						+e('a').link(href='#Пивоварение') Пивоварение
+					+e('li').item
+						+e('a').link(href='#Виноделие') Виноделие
+
+
+		+e.w
+			+e.in
+				+e.top
+					+e('h1').title Статьи
+
+					+e.top-filter
+						+b.catalog-count
+							+e('form')(method='post')
+								+e('select')(name='')
+									+e('option')(value='1') 20
+									+e('option')(value='2') 40
+									+e('option')(value='3') 60
+
+
+						+b.pagination
+							+e('a').link(href='#') 1
+							+e('a').link(href='#') 2
+							+e('a').link(href='#') 3
+							+e('a').link(href='#') 4
+							+e('a').link(href='#') 5
+
+
+				+e('div').list
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/text-article.jpg')
+									+e('img')(src='assets/images/content/text-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/video-article.jpg')
+									+e('img')(src='assets/images/content/video-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/text-article.jpg')
+									+e('img')(src='assets/images/content/text-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+		+e.w
+			+e.in
+				+e('div').list
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/text-article.jpg')
+									+e('img')(src='assets/images/content/text-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/video-article.jpg')
+									+e('img')(src='assets/images/content/video-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+
+					+e('div').item
+							+e('div').image
+								+e('a').link(href='assets/images/content/text-article.jpg')
+									+e('img')(src='assets/images/content/text-article.jpg' alt='')
+							+e('h3').item-title Правила виноделов
+							+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+							+e('a').item-more(href='#link') Читать дальше
+
+
+
+

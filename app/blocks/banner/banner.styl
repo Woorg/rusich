@@ -1,0 +1,33 @@
+.banner
+	background #f6f6f6 url('../images/general/banner.jpg') 50% 0 no-repeat
+	&_second
+		background #fff url('../images/general/banner-second.jpg') 50% 0 no-repeat
+		background-size cover
+	&__in
+		@extend .in
+		font-size 0
+		clearfix()
+	&__item
+		display inline-block
+		vertical-align top
+		height 200px
+		&:first-child
+			padding-top 50px
+			padding-right 80px
+			padding-left 70px
+			width 700px
+		&:last-child
+			padding-top 78px
+			width 470px
+	&__title
+		padding-bottom 20px
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		letter-spacing tracking(75)
+		color $color-text-first
+
+	&__button
+		text-align center
+

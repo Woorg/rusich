@@ -1,0 +1,527 @@
+.main
+	&_product
+		.main__top
+			padding-top 20px
+			padding-left 80px
+			overflow hidden
+			@extend .in
+			&:after
+				display none
+
+	&__row
+		clearfix()
+
+	&__row_first
+		.main__in
+			@extend .in
+			padding-top 0
+			padding-bottom 36px
+			padding-left 54px
+			min-height auto
+			clearfix()
+		.main__side
+			margin-right 0
+			width 388px
+			.main__button
+				position relative
+				display inline-block
+				padding-top 17px
+				padding-right 140px
+				padding-bottom 16px
+				padding-left 30px
+				background-color $color-gray-light
+				font-size 14px
+				text-transform uppercase
+				color #000
+				text-decoration none
+				&:after
+					position absolute
+					top 18px
+					right 36px
+					content ''
+					sprite($accordeon_icon)
+				&:hover
+					&:after
+						sprite($accordeon_icon_down)
+
+
+	&__row_second
+		background-color #f6f6f6
+		.main__content
+			padding-top 38px
+			padding-bottom 44px
+
+	&__row_third
+		background #FFF
+		.main__row-in
+			padding-top 33px
+			padding-bottom 20px
+	&__row_four
+		background #F6F6F6
+		.main__row-in
+			padding-top 14px
+			padding-bottom 14px
+	&__row_five
+		background #FFF
+		.main__row-in
+			padding-top 25px
+			padding-bottom 80px
+
+	&__row-in
+		@extend .in
+		padding-left 56px
+		padding-right 74px
+		clearfix()
+
+	&__side
+		margin-right 30px
+		float left
+		width 360px
+		clearfix()
+	&__content
+		float left
+		width 670px
+		letter-spacing tracking(75)
+		clearfix()
+	&__backlinks-w
+		position relative
+		z-index 1
+		margin-top -36px
+		margin-bottom 22px
+		clearfix()
+	&__back-link
+		float left
+		font-size 12px
+		text-decoration underline
+		color #0c0c0c
+		&:hover
+			text-decoration none
+	&__next-link
+		float right
+		font-size 12px
+		text-decoration underline
+		color #0c0c0c
+		&:hover
+			text-decoration none
+	&__title
+		margin-bottom 11px
+		font-family $roboto-med
+		font-size 21px
+		line-height 23px
+		text-transform uppercase
+		color #000
+	&__code
+		font-size 21px
+		line-height 23px
+		color #999
+		span
+			font-family $roboto-med
+			text-transform uppercase
+			color #616161
+
+	&__text
+		font-size 14px
+		color #1b1b1b
+		line-height 33px
+
+	&__summary
+		float right
+		width 680px
+	&__summary-price
+		display inline-block
+		font-size 28px
+		line-height 58px
+		color #000
+		span
+			padding-left 36px
+			font-family $roboto-med
+			font-size 30px
+			line-height 1
+			color #000
+	&__summary-w
+		width 255px
+		float right
+	&__summary-button
+		padding 17px 21px 12px 17px
+		float right
+		background-color #00a2ff
+		font-family $roboto-bld
+		font-size 14px
+		line-height 16px
+		text-transform uppercase
+		color #fff
+		text-decoration none
+
+.spinner
+	position relative
+	width 84px
+	float left
+	&__input
+		border none
+		padding-top 17px
+		padding-right 5px
+		padding-bottom 18px
+		padding-left 5px
+		size 56px 58px
+		background-color #fff
+		font-size 28px
+		text-align center
+		line-height 1
+		color #000
+	.ui-spinner-button
+		position absolute
+		right 0
+		background-color #00a2ff
+		color #FFF
+		cursor pointer
+		&:after
+			position absolute
+			content ''
+			size 28px 29px
+			font-size 24px
+			color #fff
+			line-height 28px
+			text-align center
+	.ui-spinner-up
+		top 0
+		size 28px 29px
+		background-color #00a2ff
+		&:hover
+			background-color #368bbc
+		&:after
+			top 0
+			left 0
+			content '+'
+	.ui-spinner-down
+		bottom 0
+		size 28px 29px
+		background-color #4b697b
+		&:hover
+			background-color #153445
+		&:after
+			top 0
+			left 0
+			content '-'
+	&__minus
+		opacity 0
+	&__plus
+		opacity 0
+
+.product-slider
+	.bx-wrapper
+		margin-bottom 0
+	&__list
+		width 358px
+		height 224px
+		overflow hidden
+	&__item
+		position relative
+		width 358px
+		height 224px
+		float right
+		cursor pointer
+		img
+			display block
+			width 358px
+			height 224px
+		&:after
+			position absolute
+			top 17px
+			right 19px
+			content ''
+			display none
+			z-index 1
+			sprite($search)
+		&:hover
+			&:after
+				display block
+
+	&__thumbs
+		margin-top 12px
+		clearfix()
+	&__thumb-item
+		margin-right 10px
+		float left
+		&:nth-child(2n)
+			margin-right 0
+		img
+			display block
+			width 174px
+			height 110px
+
+// .video
+.video_side
+	background #FFF
+	.video__image
+		position relative
+		margin-bottom 15px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			margin-top -23px
+			margin-left  -19px
+			content ''
+			sprite($side_video_icon)
+			z-index 1
+		img
+			display block
+			width 358px
+			height 210px
+
+	.video__title
+		font-size 16px
+		line-height 18px
+		text-decoration underline
+		color #1b1b1b
+	.video__link
+		display block
+		text-decoration none
+		&:hover
+			.video__title
+				text-decoration none
+
+.details
+	width 100%
+	&__head
+		font-family $roboto-med
+		font-size 18px
+		line-height 1
+		text-transform uppercase
+		color #616161
+	&__col
+		border-top 1px solid #ECECEC
+		padding-top 15px
+		padding-bottom 16px
+		vertical-align top
+	th
+		border none
+	&__col_first
+		width 50px
+		line-height 28px
+	&__col_check
+		padding-top 0
+	&__col_title
+		padding-top 0
+		width 438px
+		line-height 28px
+	&__col_price
+		padding-top 0
+		padding-bottom 33px
+		width 200px
+		font-family $roboto-med
+		font-size 28px
+		line-height 1
+		color #000
+		text-align right
+	&__col_second
+		width 220px
+		font-family $roboto-med
+		font-size 18px
+		line-height 1
+		vertical-align middle
+		color #616161
+	&__col_third
+		width 100px
+		vertical-align middle
+	&__col_four
+		vertical-align middle
+		text-align right
+		font-size 24px
+		line-height 1
+		color #000
+	&__col-w
+		text-align left
+	// &__row
+
+	&__checkbox
+		position relative
+		size 32px
+		background-color #f0efef
+	&__checkbox-label
+		position absolute
+		top 0
+		left 0
+		size 32px
+		cursor pointer
+		z-index 1
+		&:after
+			position absolute
+			top 7px
+			left 6px
+			content ''
+	&__checkbox-input
+		size 32px
+		opacity 0
+		&:checked + label
+			&:after
+				sprite($checkbox)
+
+	&__image
+		position relative
+	&__image-icon
+		sprite($photo_icon)
+		cursor pointer
+	&__image-big
+		position absolute
+		top 20px
+		left 20px
+		display none
+		size 211px 152px
+		z-index 1
+		img
+			display block
+			max-width 100%
+			height auto
+	&__image
+		&:hover
+			.details__image-big
+				display block
+				background-color #c5c5c5
+				// border 7px solid #e2dede
+				border 7px solid #fff
+				box-shadow 2.5px 4.3px 35px rgba(0, 0, 0, 0.46)
+
+.some-links
+	padding-top 20px
+	float right
+	&__link
+		display inline-block
+		vertical-align top
+		font-family $roboto-bld
+		font-size 16px
+		line-height 22px
+		text-decoration underline
+		text-transform uppercase
+		color #555
+		&:hover
+			text-decoration none
+	&__social
+		display inline-block
+		vertical-align top
+		padding-right 15px
+		clearfix()
+	&__social-item
+		margin-left 4px
+		float left
+		hide-text()
+	&__social-item_vk
+		sprite($some_vk)
+	&__social-item_fb
+		sprite($some_fb)
+
+.characters
+	color #1b1b1b
+	letter-spacing tracking(75)
+	&__row
+		margin-bottom 10px
+	&__title
+		margin-bottom 4px
+		font-family $roboto-bld
+		font-size 16px
+		line-height 30px
+	&__text
+		font-size 14px
+		line-height 30px
+
+.instruct
+	font-size 0
+	letter-spacing tracking(75)
+	&__item
+		position relative
+		margin-right 70px
+		margin-bottom 40px
+		padding-left 90px
+		width 330px
+		display inline-block
+		vertical-align top
+		&:nth-child(2n)
+			margin-right 0
+		&:after
+			position absolute
+			top 6px
+			left 0
+			content ""
+		&_pdf
+			&:after
+				sprite($pdf)
+		&_doc
+			&:after
+				sprite($doc)
+		&_jpg
+			&:after
+				sprite($jpg)
+	&__link
+		text-decoration none
+		&:hover
+			.instruct__title
+				text-decoration underline
+	&__title
+		margin-bottom 5px
+		color #1b1b1b
+		font-family $roboto-regular
+		font-size 18px
+		line-height 30px
+	&__size
+		font-family $roboto-regular
+		font-size 18px
+		line-height 30px
+		color #00a2ff
+
+.menu-side
+	&__menu-list
+			padding-top 10px
+
+	&__menu-item
+		border-bottom 1px solid #ACACAC
+		background-color $color-gray-light
+		&_active
+			.sub-menu
+				display block
+		.ui-accordion-header-active
+			font-family $roboto-med
+	&__menu-link
+		position relative
+		padding-top 18px
+		padding-right 60px
+		padding-bottom 22px
+		padding-left 28px
+		display block
+		text-decoration none
+		font-size 14px
+		line-height 16px
+		text-transform uppercase
+		color #000
+		letter-spacing tracking(75)
+	&__menu-icon
+		position absolute
+		top 20px
+		right 40px
+		content ''
+		sprite($accordeon_icon)
+		&_active
+			sprite($accordeon_icon_down)
+
+.sub-menu
+	background-color $color-gray-dark
+	padding-left 46px
+	padding-right 50px
+	display none
+	&__list
+		padding-top 10px
+		padding-bottom 26px
+	// &__item
+
+	&__link
+		padding-top 10px
+		padding-bottom 6px
+		display block
+		font-size 14px
+		line-height 16px
+		color #000
+		letter-spacing tracking(75)
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+

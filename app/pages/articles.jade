@@ -1,0 +1,42 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+include ../blocks/articles-full/articles-full
+include ../blocks/video/video
+
+include ../blocks/banner/banner
+include ../blocks/advantages/advantages
+include ../blocks/footer-second/footer-second
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Статьи и видео';
+
+block content
+	+topline()
+	+header()
+	+b('main').main._articles
+		+e.in
+			+breadcrumbs()._articles
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Статьи
+
+			+b('h1').title Статьи и видео
+
+		+articles-full()
+
+		+video()
+
+	+banner()._second
+	+advantages()
+	+footer-second()
+
+	+scripts(['app.min.js'])

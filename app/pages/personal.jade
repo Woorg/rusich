@@ -1,0 +1,42 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline-personal/topline-personal
+include ../blocks/topline/topline
+include ../blocks/header/header
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+include ../blocks/personal/personal
+
+include ../blocks/advantages/advantages
+include ../blocks/footer-second/footer-second
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Личный кабинет';
+
+block content
+	+topline-personal()
+	+topline()
+	+header()
+
+	+b('main').main
+		+e.in
+			+breadcrumbs()
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Личный кабинет
+
+			+personal()
+
+	+advantages()
+	+footer-second()
+
+	+scripts(['app.min.js'])
+
+
+
+

@@ -1,0 +1,312 @@
+// .catalog
+
+.main
+	&_catalog
+		.main__top
+			padding-top 25px
+			padding-left 80px
+			padding-bottom 0
+			padding-right 85px
+			@extend .in
+			clearfix()
+			&:after
+				display none
+		.main__in
+			@extend .in
+			padding-top 0
+			padding-left 56px
+			padding-bottom 115px
+			padding-right 85px
+			clearfix()
+.content
+	&__top
+		position relative
+		padding-bottom 30px
+		clearfix()
+	&__bottom
+		position relative
+		float right
+		clearfix()
+	&__title
+		margin-right 300px
+		font-family $roboto-med
+		font-size 21px
+		line-height 23px
+		text-transform uppercase
+		color #616161
+		letter-spacing tracking(75)
+	&__control
+		position absolute
+		top 0
+		right 0
+
+.catalog-view
+	float left
+	a
+		margin-left 10px
+		display inline-block
+		vertical-align top
+		hide-text()
+		&:first-child
+			margin-left 0
+	&__list
+		sprite($list_icon)
+		&:hover
+			sprite($list_icon_hover)
+		&.active
+			sprite($list_icon_hover)
+	&__grid
+		sprite($grid_icon)
+		&:hover
+			sprite($grid_icon_hover)
+		&.active
+			sprite($grid_icon_hover)
+
+.catalog-count
+	margin-left 18px
+	width 32px
+	height 24px
+	float left
+	background-color #eaece7
+	overflow hidden
+	select
+		border none
+		padding-left 4px
+		width 52px
+		background transparent
+		cursor pointer
+
+	option
+		padding 0 6px
+		font-size 14px
+		line-height 1
+		color #0c0c0c
+
+.pagination
+	margin-left 24px
+	float left
+	&__link
+		margin-left 10px
+		font-size 14px
+		line-height 24px
+		text-decoration underline
+		color #0c0c0c
+		&:first-child
+			margin-left 0
+		&:hover
+			text-decoration none
+
+.products
+	margin-bottom 66px
+	font-size 0
+	background #FFF
+	clearfix()
+.product
+	border-bottom 1px solid #d1d1d1
+	padding-top 16px
+	padding-bottom 20px
+	width 100%
+	display table
+	clearfix()
+	&:first-child
+		padding-top 0
+	.col
+		display table-cell
+		// float left
+		// min-height 60px
+	&__image
+		// float left
+		transition opacity .3s ease
+		img
+			display block
+			size 136px 87px
+		&:hover
+			opacity .5
+	&__desc
+		padding-left 28px
+		padding-right 10px
+		display table-cell
+		width 280px
+		vertical-align middle
+		a
+			color #3a3a3a
+			text-decoration underline
+			&:hover
+				text-decoration none
+	&__title
+		margin-bottom 2px
+		padding-top 4px
+		display block
+		font-family $roboto-bld
+		font-size 14px
+		line-height 24px
+		text-transform uppercase
+		letter-spacing tracking(75)
+	&__info
+		display block
+		font-family $roboto-regular
+		font-size 14px
+		color #969696
+		letter-spacing tracking(75)
+	&__label-w
+		display table-cell
+		width 100px
+		vertical-align middle
+	&__label
+		margin-top 8px
+		padding 2px 6px 4px
+		display inline-block
+		background-color #df0d53
+		font-size 14px
+		line-height 24px
+		text-transform uppercase
+		color #fff
+		letter-spacing tracking(75)
+	&__price
+		display table-cell
+		vertical-align middle
+		width 320px
+		text-align right
+	&__price-val
+		padding-right 14px
+		padding-top 8px
+		font-family $roboto-bld
+		font-size 21px
+		line-height 24px
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__cart-button
+		display table-cell
+		vertical-align middle
+	&__button
+		position relative
+		size 52px 45px
+		background-color #c5c5c5
+		display block
+		hide-text()
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			margin-top -12px
+			margin-left -12px
+			content ''
+			sprite($basket_big)
+		&:hover
+			background-color #00a2ff
+
+.products_grid
+	margin-right -100px
+	overflow hidden
+	.product
+		position relative
+		border none
+		margin-bottom 30px
+		padding-top 0
+		padding-right 30px
+		padding-bottom 0
+		display inline-block
+		vertical-align top
+		width 300px
+		// &:nth-child(3n)
+		// 	padding-right 0px
+		&:after
+			position absolute
+			bottom 0
+			right 30px
+			content ''
+			width 300px
+			height 1px
+			background #D1D1D1
+		.col
+			display block
+			vertical-align top
+		.product__image
+			// margin-bottom 24px
+			float none
+			img
+				width 270px
+				height 172px
+		.product__desc
+			position relative
+			margin-bottom 10px
+			padding-left 0
+			padding-right 0
+			// padding-bottom 16px
+			padding-bottom 0
+			display table
+			width 100%
+			height 82px
+			text-align center
+			a
+				display table-cell
+				vertical-align middle
+				text-decoration none
+				&:hover
+					text-decoration underline
+			&:after
+				position absolute
+				bottom 0
+				left 50%
+				content ''
+				margin-left -38px
+				width 66px
+				height 1px
+				background #6c6c6c
+		// .product__title
+
+		// .product__info
+
+		.product__label-w
+			position absolute
+			top 0
+			right 30px
+			width auto
+		.product__label
+			margin-top 0
+
+		.product__price
+			margin-bottom 30px
+			width auto
+			margin-right 52px
+			text-align right
+		.product__price-val
+			padding-right 20px
+			padding-bottom 10px
+		.product__cart-button
+			position absolute
+			bottom 30px
+			right 30px
+		// .product__button
+
+// 	&__w
+
+// 	.title
+
+// 	.subtitle
+
+// .catalog-view
+
+// 	&__list
+
+// 	&__grid
+
+// .catalog-count
+
+
+// .pagination
+
+
+.parallax
+	position absolute
+	top 0
+	left 0
+	width 100%
+	// height 222px
+	height 416px
+	overflow hidden
+	z-index -1
+	img
+		top 0
+
+

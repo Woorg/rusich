@@ -1,0 +1,17 @@
+mixin topline()
+	+b.topline&attributes(attributes)
+		+e.in
+			+e('ul').list
+				+e('li').item
+					+e('a').link(href='#') О компании
+				+e('li').item
+					+e('a').link(href='#') Форум
+				+e('li').item
+					+e('a').link(href='#') Статьи и видео
+				+e('li').item._active
+					+e('a').link(href='#') Новости
+				+e('li').item
+					+e('a').link(href='#') Сотрудничество
+				+e('li').item
+					+e('a').link(href='#') Контакты
+

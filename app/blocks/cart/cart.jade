@@ -1,0 +1,113 @@
+mixin cart()
+	+b.cart&attributes(attributes)
+		+e('h1').title Моя корзина
+
+		+e('form')(method='post' action='')
+			+b('table').cart-table
+
+				+e('tr').row
+					+e('th').head._code(colspan='2') Артикул
+					+e('th').head._title Наименование
+					+e('th').head._price Цена, руб.
+					+e('th').head._amount Количество
+					+e('th').head._delete Убрать
+
+
+				+e('tr').row
+
+					+e('td').item-image
+						+e('a').item-link(href='#')
+							+e('img')(src='assets/images/content/cart-item.jpg' alt='image')
+
+					+e('td').item-code ПН 6
+
+					+e('td').item-title
+						+e.item-link(href='#') Сусловарочный котел, 36 литров
+
+					+e('td').item-price 120 000
+
+					+b('td').cart-spinner
+						+e.w
+							+e('input').input(type='text' value='12' name='')
+
+					+e('td').item-delete
+
+						+e('a')(href='#') Убрать из корзины
+
+
+				+e('tr').row
+					+e('td').item-image
+						+e('a').item-link(href='#')
+							+e('img')(src='assets/images/content/cart-item.jpg' alt='image')
+
+					+e('td').item-code ПН 6
+
+					+e('td').item-title
+						+e.item-link(href='#') Сусловарочный котел, 36 литров
+
+					+e('td').item-price 120 000
+
+					+b('td').cart-spinner
+						+e.w
+							+e('input').input(type='text' value='12' name='')
+
+					+e('td').item-delete
+						+e('a')(href='#') Убрать из корзины
+
+				+e('tr').row
+					+e('td').item-image
+						+e('a').item-link(href='#')
+							+e('img')(src='assets/images/content/cart-item.jpg' alt='image')
+
+					+e('td').item-code ПН 6
+
+					+e('td').item-title
+						+e.item-link(href='#') Сусловарочный котел, 36 литров
+
+					+e('td').item-price 120 000
+
+					+b('td').cart-spinner
+						+e.w
+							+e('input').input(type='text' value='12' name='')
+
+					+e('td').item-delete
+						+e('a')(href='#') Убрать из корзины
+
+				+e('tr').row
+					+e('td').item-image
+						+e('a').item-link(href='#')
+							+e('img')(src='assets/images/content/cart-item.jpg' alt='image')
+
+					+e('td').item-code ПН 6
+
+					+e('td').item-title
+						+e.item-link(href='#') Сусловарочный котел, 36 литров
+
+					+e('td').item-price 120 000
+
+					+b('td').cart-spinner
+						+e.w
+							+e('input').input(type='text' value='12' name='')
+
+					+e('td').item-delete
+						+e('a')(href='#') Убрать из корзины
+			+e.row
+				+e('a').delete-all(href='#delete-all') очистить корзину
+
+				+b.cart-summary
+
+					+e.icon
+					+e.w
+						+e.label Итого:
+						+e.total
+							+e('span').total-text 4 товара на сумму
+							+e('span').total-price 500 000 руб.
+			+e.row
+				+b.cart-buttons
+					+e('a').button.button__._style-five(href='#button') Вернуться в каталог
+					+e('a').button.button__._style-four(href='#button') оформить заказ
+
+
+
+
+

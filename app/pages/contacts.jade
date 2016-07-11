@@ -1,0 +1,115 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content/content
+include ../blocks/side/side
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+
+block head
+	- var pageTitle = 'Контакты';
+
+block content
+	+topline()
+	+header()
+
+	+b('main').main._contacts
+		+e.top
+			+e.in
+				+breadcrumbs()
+					+e('ul').list
+						+e('li').item
+							+e('a').link(href='#link') Главная
+						+e('li').item
+							+e('strong').link._last Контакты
+
+				+b('h1').title Контакты
+
+		+b.info
+			+e.in
+				+e('h2').title Центральный офис:
+				+e.w
+					+e.item._address 115522, Москва, ул. Москворечье, <br/>д. 4, корп. 3
+
+					+e.item._phone
+						+e('a')(href='tel:74955454599') +7 (495) 545-45-99
+					+e.item._email
+						+e('a')(href='mailto:info@rusichsamogon.ru') info@rusichsamogon.ru
+
+		+e.map#map
+		+e.bottom
+			+b.content
+				+b.contact-us
+					+e('h3').title Свяжитесь с нами
+
+					+e('form').form#feedback-form(method='post' action='')
+						+e.row
+							+e.col
+								+e('input').input(type='text' value='' placeholder='ФИО' name='feedback_name')
+								+e('input').input(type='text' value='' placeholder='Телефон' name='feedback_phone')
+								+e('input').input(type='text' value='' placeholder='e-mail' name='feedback_email')
+							+e.col
+								+e('input').input(type='text' value='' placeholder='Тема' name='feedback_noname')
+								+e('textarea').textarea(name='feedback_message' placeholder='Текст сообщения')
+						+e.submit-w
+							+e('input').submit.button_style-third(type='submit' value='Отправить')
+
+
+				+b.subscribe-main
+					+e('form').form#subscribe-main(method='post' action='')
+						+e('label').label(for='label-email') Подписаться на рассылку
+						+e.w
+							+e('input').input(id='label-email' type='text' value='' placeholder='e-mail' name='subscribe_main')
+							+e('input').submit(type='submit' value='Отправить')
+
+			+b('aside').side
+				+b().widget
+					+e('img')(src='assets/images/general/vk-widget.jpg')
+				+b().widget
+					+e('img')(src='assets/images/general/widget-facebook.png')
+
+
+		//- +side
+
+	+advantages()
+	+footer()
+
+	+scripts(['https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru_RU', 'app.min.js'])
+
+	script.
+		ymaps.ready(init);
+
+		function init(){
+
+			var myMap;
+
+			myMap = new ymaps.Map("map", {
+				center: [55.643576, 37.653011],
+				zoom: 17,
+				controls: []
+			});
+
+			myMap.behaviors.disable('scrollZoom');
+
+			myMap.controls.add("zoomControl", {
+				position: {top: 15, left: 15}
+			});
+
+			var myPlacemark = new ymaps.Placemark([55.643576, 37.653011] , {},
+				{ iconLayout: 'default#image',
+				  iconImageHref: 'assets/images/general/map-marker.png',
+				  iconImageSize: [31,51],
+				  iconImageOffset: [-15,-45]
+			});
+
+			myMap.geoObjects.add(myPlacemark);
+
+		}
+
+
+

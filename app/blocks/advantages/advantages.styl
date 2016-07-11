@@ -1,0 +1,62 @@
+.advantages
+	background-color $color-gray-light
+	&_product
+		background-color #FFF
+	&__in
+		@extend .in
+		padding-top 34px
+		padding-left 85px
+		padding-right 85px
+		padding-bottom 20px
+		min-height 180px
+		font-size 0
+		clearfix()
+	&__item
+		position relative
+		width 268px
+		display inline-block
+		vertical-align top
+		&:after
+			position absolute
+			top 0
+			right 0
+			width 1px
+			height 99px
+			background #A5A5A5
+			content ''
+		&:last-child
+			&:after
+				display none
+	&__item_production
+		.advantages__item-icon
+			margin-bottom 15px
+			sprite($own_production)
+	&__item_prices
+		width 232px
+		.advantages__item-icon
+			margin-bottom 13px
+			sprite($reasonable_prices)
+	&__item_counseling
+		width 298px
+		.advantages__item-icon
+			margin-bottom 14px
+			sprite($counseling)
+	&__item_delivery
+		width 232px
+		.advantages__item-icon
+			margin-bottom 23px
+			sprite($delivery_service)
+	&__link
+		text-decoration none
+	&__item-icon
+		margin auto
+		display block
+	&__item-title
+		display block
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+		text-align center
+		letter-spacing tracking(75)
+
+

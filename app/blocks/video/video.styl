@@ -1,0 +1,91 @@
+.video
+	background #f6f6f6
+	&_side
+		background #FFF
+	&__in
+		@extend .in
+		padding-top 30px
+		padding-left 85px
+		padding-bottom 20px
+		padding-right 85px
+
+	&__title
+		margin-bottom 33px
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #2d2d2d
+		letter-spacing tracking(75)
+		text-decoration none
+	&__slider
+		position relative
+		clearfix()
+	&__item
+		margin-right 65px
+		width 300px
+		float left
+		&:nth-child(3n)
+			margin-right 0
+		&:after
+			display none
+	&__link
+		display block
+		text-decoration none
+	&__image
+		position relative
+		margin-bottom 36px
+		img
+			display block
+			// width 300px
+			// height 187px
+	&__fade
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-color rgba(0,0,0,.62)
+	&__play-button
+		position absolute
+		top 50%
+		left 50%
+		margin-top -23px
+		margin-left -19px
+		z-index 2
+		sprite($side_video_icon)
+	&__item-title
+		margin-bottom 16px
+		font-size 21px
+		line-height 23px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__item-text
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+		letter-spacing tracking(75)
+	.bx-prev,
+	.bx-next
+		position absolute
+		top 64px
+		hide-text()
+	.bx-prev
+		right -60px
+		sprite($right_arrow)
+		&:hover
+			sprite($right_arrow_hover)
+	.bx-next
+		left -60px
+		sprite($left_arrow)
+		&:hover
+			sprite($left_arrow_hover)
+
+.video_side
+	.video__title
+		font-family $roboto-lght
+		font-size 16px
+		font-weight normal
+		color #1b1b1b
+		text-transform none

@@ -1,0 +1,43 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/cart/cart
+include ../blocks/cart-banner/cart-banner
+
+
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Корзина';
+
+block content
+	+topline()
+	+header()
+
+	+b('main').main._cart
+		+e.in
+			+breadcrumbs()
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Моя корзина
+
+			+cart()
+
+
+	+cart-banner()
+	+advantages()
+	+footer()
+
+	+scripts(['app.min.js'])
+
+
+
+

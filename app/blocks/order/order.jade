@@ -1,0 +1,99 @@
+mixin order()
+	+b.order&attributes(attributes)
+		+b('h1').title Оформление заказа
+
+		+e('form')#order-form(method='post' action='')
+			+e.item
+				+e.item-top
+					+e.number &numero; заказа: <span>О-12344-рн567</span>
+					+e.amount сумма: <span>500 000 руб.</span>
+
+				+e.details
+					+e.input-w
+						+e('input').input._style-first(type='text' value='' placeholder='логин' name='order_login')
+					+e.details-sep *
+					+e.input-w
+						+e('input').input._style-second(type='text' value='' placeholder='e-mail' name='order_email')
+					+e.details-sep *
+					+e.input-w
+						+e('input').input._style-third(type='text' value='' placeholder='номер телефона' name='order_phone')
+
+				+b.payment-variant
+					+e('h2').title Способ оплаты
+
+					+b.radio-w
+						+e('input').radio(id='radio-label-1' type='radio' value='1' name='payment')
+						+e('label').radio-label(for='radio-label-1') Наличными курьеру
+						+e('span').radio-note (скидка 5%)
+
+					+b.radio-w
+						+e('input').radio(id='radio-label-2' type='radio' value='2' name='payment')
+						+e('label').radio-label(for='radio-label-2') Безналичный расчёт
+
+					+b.radio-w
+						+e('input').radio(id='radio-label-3' type='radio' value='3' name='payment')
+						+e('label').radio-label(for='radio-label-3') Картой (электронным платежом)
+
+					+b.radio-w
+						+e('input').radio(id='radio-label-4' type='radio' value='4' name='payment')
+						+e('label').radio-label(for='radio-label-4') Картой при получении
+
+			+e.item
+				+e.item-top
+					+e.number № заказа: <span>О-12344-рн567</span>
+					+e.amount сумма: <span>4 750 руб.</span>
+
+				+b.delivery-variant
+					+e('h2').title Способ доставки
+
+					+b.radio-w
+						+e('input').radio(id='deliv-label-1' type='radio' value='1' name='delivery')
+						+e('label').radio-label(for='deliv-label-1') Служба доставки (партнеры)
+
+						+b('ul').delivery-service
+							+e('li').item._deliv-1
+								+e.item-icon
+								+e('input').checkbox(id='check-label-1' type='checkbox' value='' name='delivery_service_1')
+								+e('label').checkbox-label(for='check-label-1') Деловые линии
+							+e('li').item._deliv-2
+								+e.item-icon
+								+e('input').checkbox(id='check-label-2' type='checkbox' value='' name='delivery_service_2')
+								+e('label').checkbox-label(for='check-label-2') Пэк
+							+e('li').item._deliv-3
+								+e.item-icon
+								+e('input').checkbox(id='check-label-3' type='checkbox' value='' name='delivery_service_3')
+								+e('label').checkbox-label(for='check-label-3') Жел дор
+							+e('li').item._deliv-4
+								+e.item-icon
+								+e('input').checkbox(id='check-label-4' type='checkbox' value='' name='delivery_service_4')
+								+e('label').checkbox-label(for='check-label-4') Автотрейдинг
+					+b.radio-w
+						+e('input').radio(id='deliv-label-2' type='radio' value='2' name='delivery')
+						+e('label').radio-label(for='deliv-label-2') Самовывоз
+					+b.radio-w
+						+e('input').radio(id='deliv-label-3' type='radio' value='3' name='delivery')
+						+e('label').radio-label(for='deliv-label-3') курьерская служба Русич <span>(только Москва)</span>
+
+				+b.deliv-address
+					+e('h2').title Адрес доставки
+
+					+e.form
+						+e('input').input._style-first(type='text' value='' placeholder='Ваш город' name='city' )
+						+e('input').input._style-second(type='text' value='' placeholder='индекс' name='postcode' )
+						+e('input').input._style-third(type='text' value='' placeholder='Улица' name='street' )
+						+e('input').input._style-four(type='text' value='' placeholder='Дом' name='house' )
+						+e('input').input._style-five(type='text' value='' placeholder='Квартира' name='appartment' )
+
+						+e.textarea-w
+							+e('h3').textarea-title Комментарий к заказу:
+
+							+e('textarea').textarea(name='order_message')
+
+
+			+e.bottom
+				+e('input').button__.button._style-four._order-popup(type='submit' value='Оформить заказ')
+				+e('a').button__.button._style-five(href='#') изменить заказ
+
+
+
+//- #order-popup

@@ -1,0 +1,59 @@
+.articles
+	float left
+	width 630px
+	padding-top 36px
+	&__title
+		padding-bottom 30px
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__list
+		clearfix()
+	&__item
+		margin-right 30px
+		width 300px
+		float left
+		&:nth-child(2n)
+			margin-right 0
+	&__link
+		display block
+		text-decoration none
+	&__image
+		position relative
+		margin-bottom 36px
+		img
+			width 300px
+			height 187px
+	&__fade
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-color rgba(0,0,0,.62)
+	&__item-title
+		margin-bottom 16px
+		font-size 21px
+		line-height 23px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__item-text
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+		letter-spacing tracking(75)
+	&__play
+		position absolute
+		top 50%
+		left 50%
+		content ""
+		margin-top -23px
+		margin-left -22px
+		sprite($video_icon)
+		z-index 1
+
+

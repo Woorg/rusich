@@ -1,0 +1,21 @@
+mixin articles()
+	+b('section').articles&attributes(attributes)
+		+e('h2').title Статьи и видео
+		+e('div').list
+			+e('div').item
+				+e('a').link(href='assets/images/content/text-article.jpg')
+					+e('div').image
+						+e('img')(src='assets/images/content/text-article.jpg' alt='')
+					+e('h3').item-title Правила виноделов
+					+e('p').item-text Пригубить бокал вина — все равно что ощутить на губах капельку из реки времен
+
+			+e('div').item._video
+				+e('a').link(href='https://www.youtube.com/watch?v=KrjdcL3Ru3Q')
+					+e('div').image
+						+e('img')(src='assets/images/content/video-article.jpg' alt='')
+						+e('div').play
+						+e('div').fade
+
+					+e('h3').item-title Пивоварение
+
+			+b('a').button._style-second(href='#') Все статьи и видео

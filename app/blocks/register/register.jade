@@ -1,0 +1,41 @@
+mixin register()
+	+b.register&attributes(attributes)
+		+b('h1').title Регистрация
+
+		+e('form')#register-form(method='post')
+			+e.form
+				+e.input-w
+					+e('input').input(id='reg-log' type='text' value='' placeholder='ivanov' name='reg_name')
+					+e('label').label(for='reg-log') логин
+				+e.input-w
+					+e('input').input(id='reg-mail' type='text' value='' placeholder='ivanov@mail.ru' name='reg_email')
+					+e('label').label(for='reg-mail') e-mail
+				+e.input-w._pass
+					+e('input').input(id='reg-pass' type='password' value='' placeholder='' name='reg_password')
+					+e('label').label(for='reg-pass') пароль
+				+e.input-w._pass
+					+e('input').input(id='reg-pass-s' type='password' value='' placeholder='' name='reg_password_repeat')
+					+e('label').label(for='reg-pass-s') Повторите пароль
+
+				+e.captcha
+					+e('img')(src='assets/images/content/captcha.jpg')
+
+				+e.submit-w
+					+e('input').submit__.button._style-four(type='submit' value='зарегистрироваться')
+
+			+b.social-login
+				+e('h2').title Или войти через социальные сети
+
+				+e.links
+					+e('a').link._vk(href='#link') Vk
+					+e('a').link._fb(href='#link') Facebook
+					+e('a').link._inst(href='#link') Instagram
+					+e('a').link._ok(href='#link') Ok
+					+e('a').link._gplus(href='#link') Googleplus
+					+e('a').link._youtube(href='#link') Youtube
+
+
+
+
+
+

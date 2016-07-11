@@ -1,0 +1,231 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+include ../blocks/hero/hero
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/content/content
+include ../blocks/side/side
+include ../blocks/banner/banner
+include ../blocks/related/related
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+
+block head
+	- var pageTitle = 'Карточка товара';
+
+
+block content
+	+topline()
+	+header()
+	+hero()
+		+e.in
+			+b.categories._style-second
+				+e.item._moonshine
+					+e('a').link._active(href='#')
+						+b.button Самогоноварение
+
+				+e.item._brewing
+					+e('a').link(href='#')
+						+b.button Пивоварение
+
+				+e.item._winemaking
+					+e('a').link(href='#')
+						+b.button Виноделие
+	+b('main').main._product._moonshine
+
+		+b.parallax
+			+e.image(src="assets/images/general/beer-pattern.png")
+		+e.top
+			+breadcrumbs()._product
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Каталог
+
+
+		+e.row._first
+			+e.in
+				+e.side
+					+e('a').button(href='#some') Каталог
+
+
+
+				+e.content
+					+e.backlinks-w
+						+e('a').back-link(href='#') Вернуться в каталог
+						+e('a').next-link(href='#') Следующий товар
+
+					+e('h1').title Сусловарочный котел, 36 литров
+					+e('h2').code Артикул:  <span>ПН6</span>
+
+		+e('form')(method='post')
+
+			+e.row._second
+				+e.row-in
+					+e.side
+						+b.product-slider
+							+e('ul').list
+								+e('li').item
+									+e('a').item-link(href='assets/images/content/product-slider-1.jpg')
+										+e('img')(src='assets/images/content/product-slider-1.jpg')
+								+e('li').item
+									+e('a').item-link(href='http://loremflickr.com/600/480')
+										+e('img')(src='assets/images/content/product-slider-1.jpg')
+
+							+e.thumbs#thumbs
+								+e('a').thumb-item(data-slide-index='0' href='#')
+									+e('img')(src='assets/images/content/slider-thumb.jpg')
+								+e('a').thumb-item(data-slide-index='1' href='#')
+									+e('img')(src='assets/images/content/slider-thumb.jpg')
+
+
+					+e.content
+						+e('p').text Необходим для приготовления таких напитков, как: Русский самогон, виски, шнапс, коньяк, ром, граппа, кальвадос, чача и другие. Позволяет получать дистиллят крепостью до 85%. Вся конструкция выполнена из сплавов легких металлов, устойчивых к коррозии. Необходим для приготовления таких напитков, как: Русский самогон, виски, шнапс, коньяк, ром, граппа, кальвадос, чача и другие. Позволяет получать дистиллят крепостью до 85%.Позволяет получать дистиллят крепостью до 85%. Вся конструкция выполнена из сплавов легких металлов, устойчивых к коррозии. Необходим для приготовления таких напитков
+
+			+e.row._third
+				+e.row-in
+					+e.side
+						+b.video._side
+							+e('a').link(href='https://www.youtube.com/watch?v=KrjdcL3Ru3Q')
+								+e('div').image
+									+e('img')(src='assets/images/content/product-video.jpg' )
+								+e('div').title Как варить самогон в домашних <br/>условиях?
+
+					+e.content
+						+b('table').details
+							+e('tr').head
+								+e('th').col._first._check  ПН6
+
+								+e('th').col._title(colspan='2')  Сусловарочный котел, 36 литров
+
+								+e('th').col._price 120 000 руб.
+							+e('tr').row
+								+e('th').col._first
+									+e.checkbox
+										+e('input').checkbox-input(id='label-checkbox' type='checkbox' value='' name='')
+										+e('label').checkbox-label(for='label-checkbox')
+
+								+e('th').col._second
+									+e.col-w ПН6 элемент для котла 1
+
+								+e('th').col._third
+									+e.image
+										+e.image-icon
+
+										+e.image-big
+											+e('img')(src='assets/images/content/details-image.jpg')
+
+								+e('th').col._four 10 000 руб.
+							+e('tr').row
+								+e('th').col._first
+									+e.checkbox
+										+e('input').checkbox-input(id='label-checkbox-1' type='checkbox' value='' name='')
+										+e('label').checkbox-label(for='label-checkbox-1')
+
+								+e('th').col._second
+									+e.col-w ПН6 элемент для котла 1
+
+								+e('th').col._third
+									+e.image
+										+e.image-icon
+
+										+e.image-big
+											+e('img')(src='assets/images/content/details-image.jpg')
+
+								+e('th').col._four 10 000 руб.
+							+e('tr').row
+								+e('th').col._first
+									+e.checkbox
+										+e('input').checkbox-input(id='label-checkbox-2' type='checkbox' value='' name='')
+										+e('label').checkbox-label(for='label-checkbox-2')
+
+								+e('th').col._second
+									+e.col-w ПН6 элемент для котла 1
+
+								+e('th').col._third
+									+e.image
+										+e.image-icon
+
+										+e.image-big
+											+e('img')(src='assets/images/content/details-image.jpg')
+
+								+e('th').col._four 10 000 руб.
+
+			+e.row._four
+				+e.row-in
+					+e.summary
+						+e.summary-price Итого: <span>13 000 руб.</span>
+						+e.summary-w
+							+b.spinner
+								+e('input').input(type='text' value='1' name='')
+
+							+e('a').summary-button(href='#') Добавлено <br/>в корзину
+
+			+e.row._five
+				+e.row-in
+					+b.some-links
+						+e('a').link(href='#') форум
+						+e.social
+							+e('a').social-item._vk(href='#') Vk
+							+e('a').social-item._fb(href='#') fb
+
+
+					+b.tabs._style-third
+							+e.nav
+								+e('a').link._active(href='#tab-1') Детальное описание
+								+e('a').link(href='#tab-2') Характеристики
+								+e('a').link(href='#tab-3') Инструкции
+
+							+e.content
+								+e.tab._active#tab-1
+									+b('p').text Еще древние знали, что истина в вине, но в России зачастую бывает так, что из-за некачественного спиртного после застолья остается только тяжкое похмелье и жестокое разочарование. К сожалению, от алкогольных и пищевых отравлений не застрахован никто: все мы наслышаны о возможных последствиях, связанных с покупкой подделок в магазине, – будь то отечественная водка или дорогой иностранный бурбон. И, несмотря на то, что уровень жизни в стране повышается, опасность наткнуться на обманку не уменьшается, - только постоянно растут цены.
+
+								+e.tab#tab-2
+
+									+b.characters
+										+e.row
+											+e('h2').title Характеристики
+
+											+e('p').text Диаметр колонны — 38 мм.
+
+										+e.row
+											+e('h2').title Вес и габариты упаковки
+
+											+e('p').text Размер коробки с колонной «Арома компакт» — 245×245×345 мм;
+											+e('p').text Вес коробки с колонной «Арома компакт» — 3,9 кг;
+											+e('p').text Размер коробки с доп. оборудованием — 200×100×510 мм;
+											+e('p').text Вес коробки с доп. оборудованием — 5,1 кг.
+											+e('p').text Общий вес комплекта — 9 кг.
+
+
+								+e.tab#tab-3
+									+b.instruct
+										+e.item._pdf
+											+e('a').link(href='#')
+												+e('div').title Паспорт оборудования <br/>для самогоноварения
+												+e('div').size 2,5 Мб.
+
+										+e.item._doc
+											+e('a').link(href='#')
+												+e('div').title Паспорт оборудования <br/>для самогоноварения
+												+e('div').size 2,5 Мб.
+
+										+e.item._jpg
+											+e('a').link(href='#')
+												+e('div').title Карта технологических процессов
+												+e('div').size 2,5 Мб.
+
+
+
+	+related()
+	+banner()
+	+advantages()._product
+	+footer()
+
+	+scripts(['app.min.js'])
+

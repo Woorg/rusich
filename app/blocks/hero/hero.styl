@@ -1,0 +1,91 @@
+.hero
+	position relative
+	&__title
+		position absolute
+		top 0
+		left 0
+		width 100%
+		margin-top 80px
+		font-family $roboto-bld
+		font-size 42px
+		font-weight normal
+		line-height 46px
+		text-transform uppercase
+		text-align center
+		letter-spacing tracking(75)
+		color #fff
+		z-index 1
+.categories
+	font-size 0
+	clearfix()
+	overflow hidden
+	white-space nowrap
+	&__item
+		position relative
+		display inline-block
+		vertical-align top
+		width 33.3%
+		height 425px
+		text-align center
+		&:before
+			position absolute
+			content ""
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background #000
+			background rgba(0,0,0,.40)
+	&__item_moonshine
+		background url('../images/general/moonshine-bg.jpg') 0 no-repeat
+		background-size cover
+	&__item_brewing
+		background url('../images/general/brewing-bg.jpg') 0 no-repeat
+		background-size cover
+
+	&__item_winemaking
+		background url('../images/general/winemaking-bg.jpg') 0 no-repeat
+		background-size cover
+	&__link
+		position relative
+		padding-top 186px
+		height 100%
+		display block
+		z-index 1
+	&__icon
+		position relative
+		margin auto
+		margin-bottom 32px
+		display block
+		z-index 1
+	&__icon_moonshine
+		sprite($hooch_icon)
+	&__icon_brewing
+		sprite($beer_icon)
+	&__icon_winemaking
+		sprite($wine_icon)
+
+.categories_style-second
+
+	.categories__item
+		height auto
+
+
+	.categories__link
+		padding-top 44px
+		padding-bottom 40px
+
+	.categories__link_active
+		.button
+			border-color #00A2FF
+			background #00A2FF
+
+
+
+
+
+
+
+
+
+

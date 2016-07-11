@@ -1,0 +1,184 @@
+.cart
+	&__title
+		margin-bottom 16px
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #272727
+		letter-spacing tracking(75)
+	&__row
+		clearfix()
+
+	&__delete-all
+		position relative
+		margin-top 10px
+		margin-left 33px
+		padding-left 28px
+		float left
+		color #4c4c4c
+		font-family $opensans-lght
+		font-size 14px
+		font-weight 300
+		line-height 18px
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:before
+			position absolute
+			top 2px
+			left 0
+			content ''
+			sprite($delete)
+
+.cart-table
+	margin-bottom 15px
+	width 100%
+	&__row
+		color #060606
+		vertical-align middle
+		&:nth-child(odd)
+			background-color #F6F6F6
+	&__head
+		padding-top 22px
+		padding-bottom 16px
+		background-color $color-gray-light
+		font-family $roboto-regular
+		font-size 12px
+		color #0f2b2a
+		letter-spacing tracking(75)
+		&_code
+			width 200px
+			text-align right
+		&_title
+			padding-left 30px
+			width 412px
+			text-align left
+		&_price
+			width 200px
+			text-align center
+		&_amount
+			width 100px
+			text-align right
+		&_delete
+			padding-right 10px
+			width 100px
+			text-align right
+	&__item-image
+		padding-top 10px
+		padding-left 30px
+		padding-bottom 10px
+		width 130px
+		img
+			width 100px
+			height 72px
+	&__item-link
+		text-decoration none
+		color #060606
+	&__item-code
+		width 70px
+		font-family $opensans-bld
+		font-size 13px
+		line-height 18px
+		color #060606
+		text-align center
+	&__item-title
+		padding-left 30px
+		width 412px
+		font-family $roboto-regular
+		font-size 13px
+		line-height 18px
+		text-transform uppercase
+		color #060606
+	&__item-price
+		width 170px
+		font-family $opensans-bld
+		font-size 24px
+		line-height 1
+		text-align center
+	&__item-delete
+		padding-right 10px
+		width 100px
+		a
+			float right
+			display inline-block
+			sprite($delete)
+			hide-text()
+.cart-spinner
+	padding-left 30px
+	width 130px
+	.ui-spinner
+		line-height 30px
+	.ui-spinner-button
+		position relative
+		width 23px
+		height 28px
+		cursor pointer
+		text-align center
+	.ui-spinner-down
+		position relative
+		float left
+	.ui-spinner-up
+		position relative
+		float right
+	.ui-button-text
+		padding-top 4px
+		font-family $opensans-lght
+		font-size 16px
+		line-height 18px
+	&__input
+		padding-top 7px
+		padding-bottom 8px
+		size 53px 27px
+		border 1px solid #a8a8a8
+		background-color #fff
+		font-family $opensans-lght
+		text-align center
+		font-size 12px
+		line-height 1
+		color #060606
+.cart-summary
+	margin-bottom 12px
+	float right
+	width 600px
+	&__icon
+		margin-top 18px
+		margin-left 28px
+		float left
+		sprite($cart_summary)
+	&__w
+		border 1px solid #878787
+		padding-top 33px
+		padding-left 30px
+		padding-bottom 30px
+		padding-right 30px
+		width 500px
+		float right
+		clearfix()
+	&__label
+		float left
+		font-family $opensans-lght
+		font-size 24px
+		line-height 1
+		color #02a3ff
+	&__total
+		float right
+	&__total-text
+		font-family $opensans-lght
+		font-size 18px
+		line-height 1
+		color #4c4c4c
+	&__total-price
+		padding-left 14px
+		font-family $opensans-bld
+		font-size 24px
+		line-height 1
+		color #4c4c4c
+
+.cart-buttons
+	margin-bottom 45px
+	float right
+	&__button
+		margin-left 5px
+
+

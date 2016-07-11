@@ -1,0 +1,8 @@
+mixin topline-personal()
+	+b.topline-personal&attributes(attributes)
+		+e.in
+			+e.text Добро пожаловать, <span>Сергей Иванович</span>
+
+			+e.controls
+				+e('a').controls-link(href='#') Личный кабинет
+				+e('a').controls-link(href='#') Выход

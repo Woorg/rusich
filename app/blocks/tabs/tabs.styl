@@ -1,0 +1,118 @@
+.tabs
+	&__nav
+		padding-top 4px
+		padding-left 46px
+		padding-bottom 30px
+		padding-right 70px
+		font-size 24px
+		font-weight 300
+		color rgba(0,0,0,.42)
+		clearfix()
+
+	&__link
+		padding-left 25px
+		padding-right 25px
+		color rgba(0,0,0,.45)
+		font-size 18px
+		line-height 1
+		text-transform uppercase
+		text-decoration none
+		letter-spacing tracking(75)
+		transition all .2s ease
+		&:hover
+			color #000
+
+	&__link_active
+		font-size 18px
+		line-height 1
+		text-transform uppercase
+		text-decoration none
+		color #000
+
+	&__content
+		position relative
+		clearfix()
+
+	&__tab
+		display none
+	&__tab_active
+		display block
+
+	&_style-second
+		.tabs__nav
+			padding-top 0
+			padding-bottom 18px
+			padding-left 20px
+		.tabs__link
+			padding-left 0
+			padding-right 23px
+			font-family $roboto-bld
+			font-size 17px
+			line-height 1
+			color #595959
+			text-transform uppercase
+			text-decoration underline
+			&:last-child
+				padding-right 0
+		.tabs__link_active
+			color #00a2ff
+			text-decoration none
+		.tabs__content
+			padding-left 15px
+
+	&_style-third
+		padding-left 28px
+		width 820px
+		.tabs__nav
+			padding-top 0
+			padding-bottom 42px
+			padding-left 0
+			clearfix()
+		.tabs__link
+			border 1px solid #555
+			margin-right 15px
+			padding-top 20px
+			padding-left 23px
+			padding-bottom 20px
+			padding-right 23px
+			display inline-block
+			font-family $roboto-bld
+			font-size 17px
+			line-height 1
+			color #595959
+			text-transform uppercase
+		.tabs__link_active
+			border 1px solid #00a2ff
+			background-color #00a2ff
+			font-family $roboto-bld
+			color #fff
+			text-decoration none
+		.tabs__content
+			padding-left 0
+
+
+	&_style-four
+		height 100%
+		.tabs__nav
+			padding-top 0
+			padding-right 0
+			padding-bottom 30px
+			padding-left 0
+			clearfix()
+		.tabs__link
+			padding-left 14px
+			padding-right 14px
+			display inline-block
+			color #595959
+			text-transform uppercase
+			text-decoration underline
+			&:first-child
+				padding-left 0
+		.tabs__link_active
+			font-family $roboto-regular
+			color #272727
+			text-decoration none
+		.tabs__content
+			padding-left 0
+			padding-bottom 20px
+

@@ -1,0 +1,94 @@
+.articles-full
+	margin-top 22px
+	border-top 1px solid #ECECEC
+	&__w
+		border-bottom 1px solid #ECECEC
+
+	&__in
+		@extend .in
+		padding-top 36px
+		padding-left 85px
+		padding-bottom 36px
+		padding-right 85px
+		clearfix()
+	&__top
+		clearfix()
+	&__title
+		margin-bottom 32px
+		display inline-block
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		letter-spacing tracking(75)
+		color #2d2d2d
+	&__top-filter
+		float right
+	&__list
+		font-size 0
+		clearfix()
+	&__item
+		margin-right 65px
+		width 300px
+		float left
+		&:nth-child(3n)
+			margin-right 0
+	&__link
+		display block
+		text-decoration none
+	&__image
+		position relative
+		margin-bottom 36px
+		img
+			width 300px
+			height 187px
+	&__item-title
+		margin-bottom 16px
+		font-size 21px
+		line-height 23px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__item-text
+		margin-bottom 20px
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+		letter-spacing tracking(75)
+	&__item-more
+		font-family $roboto-bld
+		font-size 14px
+		text-decoration underline
+		color #00a2ff
+		letter-spacing tracking(75)
+		&:hover
+			text-decoration none
+
+.articles-nav
+	font-size 0
+	clearfix()
+	&__item
+		margin-right 26px
+		display inline-block
+		vertical-align top
+
+		&:last-child
+			margin-right 0
+	&__link
+		font-family $roboto-bld
+		font-size 17px
+		line-height 1
+		text-transform uppercase
+		text-decoration underline
+		color #595959
+		letter-spacing tracking(75)
+		&:hover
+			text-decoration none
+	&__item_active
+		.articles-nav__link
+			color #00a2ff
+			text-decoration none
+
+
+
+

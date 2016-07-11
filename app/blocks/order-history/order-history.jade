@@ -1,0 +1,283 @@
+mixin order-history()
+	+b.order-history&attributes(attributes)
+		+e.head
+			+e.head-number Номер заказа
+			+e.head-date Дата заказа
+			+e.head-amount Сумма, руб.
+			+e.head-status Статус заказа
+			+e.head-repeat Повторить заказ
+
+
+		+e.body
+			+e.row
+				+e.row-w
+					+e.col._number
+						+e.number 12314424
+					+e.col._date
+						+e.date 11.05.2016
+					+e.col._amount
+						+e.price 120 000
+					+e.col._status
+						+e.status._active Сборка
+					+e.col._show
+						+e('a').show(href='#link') Просмотреть
+					+e.col._repeat
+						+e('a').repeat(href='#repeat') Повторить
+
+				+b.order-list
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+			+e.row
+				+e.row-w
+					+e.col._number
+						+e.number 12314424
+					+e.col._date
+						+e.date 01.01.2016
+					+e.col._amount
+						+e.price 120 000
+					+e.col._status
+						+e.status._complete Доставлен
+					+e.col._show
+						+e('a').show(href='#link') Просмотреть
+					+e.col._repeat
+						+e('a').repeat(href='#repeat') Повторить
+
+				+b.order-list
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+			+e.row
+				+e.row-w
+					+e.col._number
+						+e.number 12314424
+					+e.col._date
+						+e.date 10.03.2016
+					+e.col._amount
+						+e.price 500 000
+					+e.col._status
+						+e.status._active Сборка
+					+e.col._show
+						+e('a').show(href='#link') Просмотреть
+					+e.col._repeat
+						+e('a').repeat(href='#repeat') Повторить
+
+				+b.order-list
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+					+e.item
+						+e.col._image
+							+e('a').item-link(href='#link')
+								+e.item-image
+									+e('img')(src='assets/images/content/cart-item.jpg')
+						+e.col._code
+							+e.item-code ПН 6
+
+						+e.col._title
+							+e.item-title
+								+e('a').item-link(href='#link') Сусловарочный котел, 36 литров
+
+						+e.col._price
+							+e.item-price 120 000
+
+						+e.col._quant
+							+e.item-quant 12
+
+
+
+
+
+
+
+
+
+

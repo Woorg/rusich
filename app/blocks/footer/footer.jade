@@ -1,0 +1,88 @@
+mixin footer()
+	+b('footer').footer&attributes(attributes)
+		+e.in
+			+e.top
+				+e.logo
+					+b('a').logo._second(href='#') Русич
+
+				+e.menu
+					+b('nav').menu._second
+						+e('ul').list
+							+e('li').item
+								+e('a').link(href='#') О компании
+							+e('li').item
+								+e('a').link(href='#') Форум
+							+e('li').item
+								+e('a').link(href='#') Статьи и видео
+							+e('li').item
+								+e('a').link(href='#') Новости
+							+e('li').item
+								+e('a').link(href='#') Сотрудничество
+							+e('li').item
+								+e('a').link(href='#') Контакты
+
+				+e.social
+					+b.social._big
+						+e('a').item._instagram._big(href='#') instagram
+						+e('a').item._facebook._big(href='#') facebook
+						+e('a').item._vk._big(href='#') vk
+						+e('a').item._ok._big(href='#') odnaklassniki
+						+e('a').item._gplus._big(href='#') google plus
+						+e('a').item._youtube._big(href='#') youtube
+
+			+e.body
+				+e.subscribe
+					+b.subscribe
+						+e.title Подписка на рассылку
+
+						+e.form
+							+e('form')#subscribe-form(method='post')
+								+e('input').input(type='text' name='subscribe_email' value='' placeholder='E-mail')
+
+								+e('input').submit(type='submit' value='Подписка')
+
+				+e.contacts
+					+b.phone._style-second
+						+e('a').number(href='tel:74956773636') + 7 (495) 677 3636
+						+e('a').number(href='tel:74956773636') + 7 (495) 677 3636
+						+e('a').link(href='mailto:info@rusichsamogon.ru') info@rusichsamogon.ru
+
+					+b.address
+						+e.text г. Москва, ул. Московская, д26, <br/>оф 54
+
+
+				+e.payments
+					+b.payments
+						+e.title Способы оплаты:
+						+e.w
+							+e.item._visamaster Visa Mastercard
+							+e.item._alfa Альфа-банк
+							+e.item._webmoney Webmoney
+
+
+			+e.bottom
+				+e.copyright Все права защищены, @2016
+				+e('a').created-by(href='#') Создание сайта РА Axiom
+
+
+	+b.popup.mfp-hide#popup
+		+e.title Форма заказа звонка
+
+		+e('form')#callback-form(method='post')
+			+e('input').input(type='text' value='' placeholder='Ваше имя' name='callback_name')
+			+e('input').input(type='text' value='' placeholder='ваш телефон' name='callback_phone')
+			+e('input').submit(type='submit' value='Заказать звонок')
+
+	+b.popup-order.mfp-hide#order-popup
+		+e('h2').title Спасибо за покупку!
+
+		+e.text Ваш заказ № <span>О-12344-рн567</span> оформлен!
+
+		+e.note В течение часа с вами свяжется сотрудник <br/>компании для подтверждения заказа.
+
+
+
+
+
+
+

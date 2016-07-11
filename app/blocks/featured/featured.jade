@@ -1,0 +1,147 @@
+mixin featured()
+	+b.featured&attributes(attributes)
+		+e.in
+			+b.tabs
+				+e.nav
+					+e('a').link._active(href='#tab-1') Новинки
+					| |
+					+e('a').link(href='#tab-2') Лидеры продаж
+
+				+e.content
+					+e.tab._active#tab-1
+						+b.carousel
+							+e('div').list.owl-carousel.carousel-first
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-1.jpg' alt='')
+										+e.name-w
+											+e.title Спиртзавод «Русич»
+										+e.info модель Профи
+										+e.price-w
+											+e.price 160 000 руб.
+											+e.price._old 180 000 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._discount %
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-2.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Malt
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 2 800 руб.
+										+e.basket
+											+e.basket-icon
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-3.jpg' alt='')
+										+e.name-w
+											+e.title Миниспиртзавод «РУСИЧ»
+										+e.info Модель «Симпл» 2016
+										+e.price-w
+											+e.price._style-second 174 000 руб.
+										+e.basket
+											+e.basket-icon
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-4.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Fruit
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 3 500 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._new new
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-4.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Fruit
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 3 500 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._new new
+
+							//- +e.nav
+
+					+e.tab#tab-2
+						+b.carousel
+							+e('div').list.owl-carousel.carousel-second
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-1.jpg' alt='')
+										+e.name-w
+											+e.title Спиртзавод «Русич»
+										+e.info модель Профи
+										+e.price-w
+											+e.price 160 000 руб.
+											+e.price._old 180 000 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._discount %
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-2.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Malt
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 2 800 руб.
+										+e.basket
+											+e.basket-icon
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-3.jpg' alt='')
+										+e.name-w
+											+e.title Миниспиртзавод «РУСИЧ»
+										+e.info Модель «Симпл» 2016
+										+e.price-w
+											+e.price._style-second 174 000 руб.
+										+e.basket
+											+e.basket-icon
+
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-4.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Fruit
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 3 500 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._new new
+								+e('div').item
+									+e('a').link(href='#')
+										+e.image
+											+e('img')(src='assets/images/content/product-4.jpg' alt='')
+										+e.name-w
+											+e.title Дрожжи Safspirit Fruit
+										+e.info 500 гр.
+										+e.price-w
+											+e.price._style-second 3 500 руб.
+										+e.basket
+											+e.basket-icon
+										+e.badge._new new
+
+							//- +e.nav_second
+
+			+e('a').all(href='#') Все товары

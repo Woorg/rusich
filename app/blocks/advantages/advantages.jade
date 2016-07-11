@@ -1,0 +1,19 @@
+mixin advantages()
+	+b('section').advantages&attributes(attributes)
+		+e.in
+			+e.item._production
+				+e('a').link(href='#')
+					+e.item-icon
+					+e.item-title Собственное производство <br/>в Москве
+			+e.item._prices
+				+e('a').link(href='#')
+					+e.item-icon
+					+e.item-title Разумные цены
+			+e.item._counseling
+				+e('a').link(href='#')
+					+e.item-icon
+					+e.item-title Консультирование и <br/>обучение
+			+e.item._delivery
+				+e('a').link(href='#')
+					+e.item-icon
+					+e.item-title Служба доставки

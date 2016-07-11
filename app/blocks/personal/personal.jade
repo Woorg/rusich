@@ -1,0 +1,66 @@
+include ../order-history/order-history
+
+mixin personal()
+	+b.personal&attributes(attributes)
+
+		+b('h1').title Личный кабинет
+
+
+		+b.tabs._style-four
+			+e.nav
+				+e('a').link._active(href='#tab-1') История заказов
+				+e('a').link(href='#tab-2') Настройки
+
+			+e.content
+				+e.tab._active#tab-1
+					+order-history()
+
+				+e.tab#tab-2
+					+e('form')#personal-data(method='post')
+						+b.personal-top
+							+e.input-w
+								+e('input').input(id='personal-login' type='text' value='' placeholder='ivanov' name='personal_name')
+								+e('label').label(for='personal-login') логин
+							+e.input-w
+								+e('input').input(id='personal-email' type='text' value='' placeholder='ivanov@mail.ru' name='personal_email')
+								+e('label').label(for='personal-email') e-mail
+							+e.input-w
+								+e('input').input(id='personal-phone' type='text' value='' placeholder='893847234234' name='personal_phone')
+								+e('label').label(for='personal-phone') Телефон
+
+						+b.deliv-address
+							+e('h2').title Адрес доставки
+
+							+e.form
+								+e('input').input._style-first(type='text' value='' placeholder='город' name='personal_city' )
+								+e('input').input._style-second(type='text' value='' placeholder='654888' name='personal_postcode' )
+								+e('input').input._style-third(type='text' value='' placeholder='Улица' name='personal_street' )
+								+e('input').input._style-four(type='text' value='' placeholder='Дом' name='personal_house' )
+								+e('input').input._style-five(type='text' value='' placeholder='Квартира' name='personal_appartment' )
+
+
+						+b.change-password
+
+							+e('h2').title Изменить пароль
+
+							+e.form
+								+e.input-w
+									+e('input').input(id='ch-pass-now' type='password' value='' placeholder='' name='personal_pass' )
+									+e('label').label(for='ch-pass-now') текущий пароль
+								+e.input-w
+									+e('input').input(id='ch-pass-new' type='password' value='' placeholder='' name='personal_pass_new' )
+									+e('label').label(for='ch-pass-new') Новый пароль
+								+e.input-w
+									+e('input').input(id='ch-pass-repeat' type='password' value='' placeholder='' name='personal_pass_repeat' )
+									+e('label').label(for='ch-pass-repeat') Повторите пароль
+
+
+
+						+b.personal-bottom
+							+e('input').button__.button._style-four(type='submit' value='Сохранить изменения')
+
+
+
+
+
+

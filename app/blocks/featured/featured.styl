@@ -1,0 +1,196 @@
+.featured
+	border-top 1px solid #ececec
+	margin-top 26px
+	padding-top 26px
+	overflow hidden
+	&__in
+		position relative
+		@extend .in
+		padding-bottom 48px
+	&__all
+		position absolute
+		top 8px
+		right 86px
+		font-size 16px
+		line-height 1
+		text-decoration underline
+		color #0c0c0c
+		&:hover
+			text-decoration none
+
+	// &__long-text
+
+.long-text
+	margin-bottom 30px
+	height auto
+.long-text_hide
+	overflow hidden
+	height 206px
+
+.carousel
+	position relative
+	&__list
+		font-size 0
+		white-space nowrap
+	&__item
+		padding-right 15px
+		padding-left 15px
+		width 300px
+		display inline-block
+		vertical-align top
+		// &:nth-child(4n)
+		// 	padding-right 0
+	&__link
+		position relative
+		display block
+		text-decoration none
+	&__image
+		display block
+		opacity 1
+		transition opacity .3s ease
+		img
+			display block
+			width 270px
+			height 172px
+	&__link
+		&:hover
+			.carousel__image
+				opacity .5
+	&__badge
+		position absolute
+		top 0
+		right 0
+		line-height 1
+		text-transform uppercase
+		color #fff
+		z-index 1
+	&__badge_discount
+		padding 8px 14px
+		background-color #ffa200
+		font-family $roboto-bld
+		font-size 18px
+	&__badge_new
+		padding 10px 7px
+		background-color #df0d53
+		font-family $roboto-lght
+		font-size 14px
+	&__name-w
+		padding-top 16px
+		width 100%
+		height 52px
+		display block
+		text-align center
+		overflow hidden
+	&__title
+		position relative
+		top 50%
+		margin-bottom 10px
+		display block
+		font-family $roboto-bld
+		font-size 14px
+		line-height 16px
+		color #3a3a3a
+		white-space normal
+		text-transform uppercase
+		transform translateY(-50%)
+		text-overflow ellipsis
+		letter-spacing tracking(75)
+		overflow hidden
+
+	&__info
+		margin-bottom 18px
+		display block
+		font-family $roboto-bld
+		font-size 14px
+		color #969696
+		text-align center
+		letter-spacing tracking(75)
+	&__price-w
+		position relative
+		padding-top 20px
+		// padding-left 16px
+		display block
+		height 60px
+		text-align center
+		&:after
+			position absolute
+			left 50%
+			top 0
+			margin-left -32px
+			width 65px
+			height 1px
+			background #6C6C6C
+			content ""
+	&__price
+		margin-bottom 6px
+		display block
+		font-family $roboto-bld
+		font-size 18px
+		line-height 1
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__price_style-second
+		font-size 21px
+	&__price_old
+		display block
+		font-family $roboto-bld
+		font-size 14px
+		text-decoration line-through
+		color #9a9a9a
+		letter-spacing tracking(75)
+	&__basket
+		position absolute
+		bottom 0
+		right 0
+	&__basket-icon
+		position relative
+		size 52px 45px
+		background-color #c5c5c5
+		display block
+		&:hover
+			background-color #00a2ff
+		&:before
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			margin-top -12px
+			margin-left -12px
+			sprite($basket_big)
+// .carousel__nav,
+// .carousel__nav-second
+.carousel
+	.bx-prev
+		position absolute
+		top 50%
+		left -60px
+		margin-top -24px
+		sprite($left_arrow)
+		hide-text()
+		cursor pointer
+		z-index 1
+		&:hover
+			sprite($left_arrow_hover)
+
+	.bx-next
+		position absolute
+		top 50%
+		right -60px
+		margin-top -24px
+		sprite($right_arrow)
+		hide-text()
+		cursor pointer
+		z-index 1
+		&:hover
+			sprite($right_arrow_hover)
+
+
+
+
+
+
+
+
+
+
+

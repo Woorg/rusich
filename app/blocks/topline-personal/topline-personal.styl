@@ -1,0 +1,34 @@
+.topline-personal
+	display block
+	background-color #262723
+	&__in
+		@extend .in
+		padding 6px 85px 6px
+		color #fff
+		clearfix()
+		line-height 1
+	&__text
+		float left
+		font-size 14px
+		span
+			font-family $roboto-bld
+	&__controls
+		float right
+		font-size 0
+	&__controls-link
+		padding-left 14px
+		padding-right 14px
+		border-left 1px solid #fff
+		display inline-block
+		vertical-align top
+		color #fff
+		font-size 12px
+		line-height 12px
+		text-decoration underline
+		&:hover
+			text-decoration none
+		&:first-child
+			padding-left 0
+			border none
+		&:last-child
+			padding-right 0

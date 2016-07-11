@@ -1,0 +1,58 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+include ../blocks/hero/hero
+include ../blocks/featured/featured
+include ../blocks/banner/banner
+include ../blocks/articles/articles
+include ../blocks/about/about
+include ../blocks/news/news
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Главная страница';
+
+block content
+	+topline()
+	+header()
+	+hero()
+		+e.in
+			+e('h1').title Оборудование от производителя
+			+b.categories
+				+e.item._moonshine
+					+e('a').link(href='#')
+						+e.icon._moonshine
+						+b.button Самогоноварение
+
+				+e.item._brewing
+					+e('a').link(href='#')
+						+e.icon._brewing
+						+b.button Пивоварение
+
+				+e.item._winemaking
+					+e('a').link(href='#')
+						+e.icon._winemaking
+						+b.button Виноделие
+
+
+	+featured()
+	+banner()
+	+b('section').section
+		+e.w
+			+articles()
+			+about()
+	+b('section').section
+		+e.w
+			+news()
+	+advantages()
+	+footer()
+
+	+scripts(['app.min.js'])
+
+
+
+

@@ -1,0 +1,74 @@
+.news-full
+	margin-top 22px
+	border-top 1px solid #ececec
+	&__in,
+	&__w
+		@extend .in
+		padding-left 85px
+		padding-right 85px
+	&__in
+		padding-top 40px
+
+	&__top
+		clearfix()
+	&__title
+		margin-bottom 30px
+		display inline-block
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #2d2d2d
+		letter-spacing tracking(75)
+	&__top-filter
+		float right
+	&__w
+		padding-top 50px
+		padding-bottom 50px
+
+	&__row
+		border-bottom 1px solid #ececec
+		&:nth-child(odd)
+			background-color $color-gray-light
+	&__row_first
+		.news-full__w
+			padding-top 0
+	&__list
+		clearfix()
+	&__item
+		margin-right 30px
+		float left
+		width 500px
+		letter-spacing tracking(75)
+		&:nth-child(2n)
+			margin-right 0
+	&__item-image
+		margin-bottom 26px
+		img
+			display block
+			width 500px
+			height 187px
+	&__item-link
+		display block
+		text-decoration none
+	&__item-date
+		margin-bottom 15px
+		font-size 14px
+		text-transform uppercase
+		color #3c3c3c
+	&__item-title
+		margin-bottom 20px
+		font-size 21px
+		line-height 24px
+		text-transform uppercase
+		color #3a3a3a
+		letter-spacing tracking(75)
+	&__item-text
+		font-size 14px
+		line-height 24px
+		color $color-text-first
+	&__item-link
+		&:hover
+			.news-full__item-title
+				text-decoration underline
+

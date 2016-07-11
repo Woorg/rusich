@@ -1,0 +1,194 @@
+.order-history
+	&__head
+		padding 22px 20px 17px 30px
+		background-color $color-gray-light
+		font-size 0
+		&-number,
+		&-date,
+		&-amount,
+		&-status,
+		&-repeat
+			display inline-block
+			vertical-align top
+			font-size 12px
+			color #0f2b2a
+			letter-spacing tracking(75)
+			white-space nowrap
+	&__head-number
+		width 100px
+	&__head-date
+		padding-left 36px
+		width 170px
+	&__head-amount
+		padding-left 36px
+		width 200px
+	&__head-status
+		padding-left 5px
+		width 400px
+	&__head-repeat
+		width 100px
+
+	// &__body
+
+	&__row
+		&:nth-child(even)
+			.order-history__row-w
+				background-color $color-gray-light
+
+	&__row-w
+		padding 34px 30px 30px
+		font-size 0
+		clearfix()
+		&_active
+			background-color $color-gray-light
+	&__col
+		display inline-block
+		vertical-align top
+		color #060606
+		&_number
+			width 100px
+		&_date
+			padding-left 38px
+			width 170px
+		&_amount
+			padding-left 24px
+			width 208px
+		&_price
+			width 200px
+		&_status
+			width 140px
+		&_show
+			width 250px
+		&_repeat
+			text-align right
+			width 100px
+
+	&__number
+		font-family $opensans-bld
+		font-size 13px
+		line-height 24px
+		// color #060606
+	&__date
+		font-family $roboto-regular
+		font-size 13px
+		line-height 24px
+		text-transform uppercase
+		// color #060606
+
+	&__price
+		// color #060606
+		font-family $opensans-bld
+		font-size 24px
+	&__status
+		padding 6px 0 8px 0
+		display inline-block
+		width 80px
+		font-family $roboto-regular
+		font-size 12px
+		font-weight 400
+		color #fff
+		text-align center
+		letter-spacing tracking(75)
+		&_active
+			background-color #6ac224
+		&_complete
+			background-color #a5a5a5
+
+	&__show
+		position relative
+		padding-right 40px
+		font-family $roboto-lght
+		font-size 12px
+		font-weight 300
+		color #00a2ff
+		line-height 24px
+		text-decoration none
+		letter-spacing tracking(75)
+		&_active
+			color #0f2b2a
+		&:after
+			position absolute
+			top 3px
+			right 0
+			content ''
+			sprite($show_order)
+		&:hover
+			color #0f2b2a
+
+	&__repeat
+		margin-right 30px
+		display inline-block
+		sprite($repeat)
+		hide-text()
+
+
+.order-list
+	padding-top 20px
+	padding-left 104px
+	padding-bottom 10px
+	padding-right 18px
+	width 826px
+	display none
+	background-color $color-gray-light
+	&_active
+		display block
+	&__item
+		margin-bottom 16px
+		display table
+		color #060606
+		font-size 0
+		clearfix()
+	&__col
+		display table-cell
+		vertical-align middle
+		&_image
+			width 100px
+		&_code
+			width 100px
+		&_title
+			width 294px
+		&_price
+			width 130px
+		&_quant
+			width 70px
+			text-align center
+
+	&__item-link
+		text-decoration none
+		color #060606
+		&:hover
+			text-decoration underline
+	&__item-image
+
+		img
+			display block
+			width 100px
+			height 72px
+	&__item-code,
+	&__item-title,
+	&__item-price,
+	&__item-quant
+		display inline-block
+
+
+	&__item-code
+		padding-left 24px
+		font-family $opensans-bld
+		font-size 13px
+		line-height 18px
+
+	&__item-title
+		font-family $roboto-regular
+		font-size 13px
+		line-height 18px
+		text-transform uppercase
+	&__item-price
+		font-family $opensans-bld
+		font-size 24px
+	&__item-quant
+		font-family $opensans-lght
+		font-size 12px
+		line-height 18px
+
+
+

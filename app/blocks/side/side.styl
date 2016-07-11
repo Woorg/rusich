@@ -1,0 +1,218 @@
+.side
+	&_catalog
+		// margin-right 28px
+		width 258px
+		float left
+	&__label
+		margin-bottom 0
+		padding-left 26px
+		font-family $roboto-bld
+		font-size 24px
+		line-height 26px
+		text-transform uppercase
+		color #000
+		letter-spacing tracking(75)
+	&__menu
+		padding-top 18px
+		padding-right 28px
+		background #FFF
+	&__menu-list
+		padding-top 10px
+
+	&__menu-item
+		border-bottom 1px solid #ACACAC
+		background-color $color-gray-light
+		&_active
+			.sub-menu
+				display block
+		.ui-accordion-header-active
+			font-family $roboto-med
+	&__menu-link
+		position relative
+		padding-top 18px
+		padding-right 60px
+		padding-bottom 22px
+		padding-left 28px
+		display block
+		text-decoration none
+		font-size 14px
+		line-height 16px
+		text-transform uppercase
+		color #000
+		letter-spacing tracking(75)
+	&__menu-icon
+		position absolute
+		top 20px
+		right 40px
+		content ''
+		sprite($accordeon_icon)
+		&_active
+			sprite($accordeon_icon_down)
+
+.sub-menu
+	background-color $color-gray-dark
+	padding-left 46px
+	padding-right 50px
+	display none
+	&__list
+		padding-top 10px
+		padding-bottom 26px
+	// &__item
+
+	&__link
+		padding-top 10px
+		padding-bottom 6px
+		display block
+		font-size 14px
+		line-height 16px
+		color #000
+		letter-spacing tracking(75)
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+.filter
+	padding-top 27px
+	padding-right 28px
+	padding-bottom 27px
+	padding-left 27px
+	// padding-right 27px
+	&__title
+		margin-bottom 24px
+		font-family $roboto-bld
+		font-size 18px
+		line-height 1
+		text-transform uppercase
+		color #313131
+		letter-spacing tracking(75)
+	&__range-slider
+		border 2px solid #efefe9
+		position relative
+		margin-bottom 14px
+		width 100%
+		height 10px
+		border-radius 10px 10px
+		background #FFF
+	.ui-slider-handle
+		position absolute
+		top -2px
+		margin-left -6px
+		size 11px
+		display block
+		background-color #00a2ff
+		border-radius 50%
+	.ui-slider-range
+		position relative
+		height 6px
+		background #b2daf2 url('../images/general/range-slider.png') 20px 0 repeat-x
+
+
+	&__price-text
+		margin-bottom 13px
+		font-family Arial, 'Helvetica Neue', Helvetica, sans-serif
+		font-size 12px
+		font-weight 400
+		color #2e2e2e
+		clearfix()
+	&__price-val-from
+		float left
+	&__price-val-to
+		float right
+
+
+	&__price-wrap
+		margin-bottom 20px
+		clearfix()
+
+	&__price-from
+		float left
+		font-size 0
+		.filter__price-label
+			padding-right 6px
+			line-height 21px
+		.filter__price-input
+			width 44px
+			height 21px
+	&__price-to
+		float right
+		font-size 0
+		.filter__price-label
+			padding-right 6px
+			line-height 21px
+		.filter__price-input
+			width 55px
+			height 21px
+	&__price-label
+		display inline-block
+		vertical-align top
+		font-family Arial
+		font-size 12px
+		font-weight 400
+		color #2e2e2e
+	&__price-input
+		border 1px solid #e4e4e4
+		padding-left 2px
+		padding-right 2px
+		display inline-block
+		vertical-align top
+		background-color #fff
+		font-family Arial
+		font-size 12px
+		font-weight 400
+		color #2e2e2e
+	&__bottom
+		clearfix()
+	&__button
+		padding 12px 16px 12px
+		float left
+		background-color #0ca6fe
+		font-family ArialNarrow
+		font-size 13px
+		font-weight 400
+		color #fff
+		text-decoration none
+	&__reset
+		position relative
+		padding 12px 16px 12px
+		float right
+		font-family ArialNarrow
+		font-size 13px
+		font-weight 400
+		text-decoration underline
+		color #636363
+		&:before
+			position absolute
+			top 16px
+			left 0
+			content ''
+			sprite($reset)
+		&:hover
+			text-decoration none
+.side-banner
+	margin-bottom 10px
+	margin-right 28px
+	&__link
+		display block
+
+	&__button
+		position absolute
+		top 50%
+		left 50%
+		margin-top -23px
+		margin-left -19px
+		display block
+		sprite($side_video_icon)
+		z-index 1
+.side-banner_video
+	position relative
+	.side-banner__link
+		&:after
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			content ''
+			background rgba(0,0,0,.51)
+
+

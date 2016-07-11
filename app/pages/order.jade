@@ -1,0 +1,133 @@
+extends /blocks/layout-default/layout-default
+
+include ../blocks/topline/topline
+include ../blocks/header/header
+
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/cart-banner/cart-banner
+
+include ../blocks/order/order
+
+include ../blocks/advantages/advantages
+include ../blocks/footer/footer
+
+include ../blocks/scripts/scripts
+
+block head
+	- var pageTitle = 'Оформление заказа';
+
+block content
+	+topline()
+	+header()
+	+cart-banner()
+	+b('main').main
+		+e.in
+			+breadcrumbs()
+				+e('ul').list
+					+e('li').item
+						+e('a').link(href='#link') Главная
+					+e('li').item
+						+e('strong').link._last Оформление заказа
+
+			+order()
+
+
+
+	+cart-banner()
+	+advantages()
+	+footer()
+
+	+scripts(['app.min.js'])
+
+	script.
+
+		const orderForm = $('#order-form');
+
+		$.validator.setDefaults({
+			submitHandler: function() {
+				$('.button_order-popup').magnificPopup({
+					type: 'inline',
+					items: {src: '#order-popup'},
+					mainClass: 'order-popup'
+				});
+			}
+		});
+
+		orderForm.validate({
+			rules: {
+				order_login: {
+					required: true
+				},
+				order_email: {
+					required: true,
+					email: true
+				},
+				order_phone: {
+					required: true
+				},
+				payment: {
+					required: true
+				},
+				delivery: {
+					required: true
+				},
+				city: {
+					required: true
+				},
+				postcode: {
+					required: true
+				},
+				street: {
+					required: true
+				},
+				house: {
+					required: true
+				},
+				appartment: {
+					required: true
+				}
+				//- order_message: {
+				//- 	required: true
+				//- }
+			},
+			messages: {
+				order_login: {
+					required: ''
+				},
+				order_email: {
+					required: '',
+					email: ''
+				},
+				order_phone: {
+					required: ''
+				},
+				payment: {
+					required: ''
+				},
+				delivery: {
+					required: ''
+				},
+				city: {
+					required: ''
+				},
+				postcode: {
+					required: ''
+				},
+				street: {
+					required: ''
+				},
+				house: {
+					required: ''
+				},
+				appartment: {
+					required: ''
+				}
+				//- order_message: {
+				//- 	required: ''
+				//- }
+			}
+		});
+
+
+
+
